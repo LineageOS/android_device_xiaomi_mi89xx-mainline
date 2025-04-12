@@ -18,13 +18,15 @@ BOARD_KERNEL_APPEND_DTBS := \
     qcom/sdm450-xiaomi-*.dtb \
     qcom/sdm632-xiaomi-*.dtb
 
-TARGET_KERNEL_CONFIG := \
-    postmarketos-qcom-msm8953_defconfig \
-    gki_pre.config \
-    gki.config \
-    gki_post.config \
-    faster-build-time.config \
-    lineageos/feature/fbcon.config
+TARGET_KERNEL_CONFIG_EXT := \
+    $(TARGET_DEVICE_PATH)/kconfigs/config-postmarketos-qcom-msm8953.aarch64 \
+    kernel/mainline/configs/fragments/y/arm64/gki_pre.config \
+    kernel/mainline/configs/fragments/y/arm64/gki.config \
+    kernel/mainline/configs/fragments/y/arm64/gki_post.config \
+    kernel/mainline/configs/fragments/y/common.config \
+    kernel/mainline/configs/fragments/y/fbcon.config \
+    kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
+    kernel/mainline/configs/fragments/n/faster-build-time.config
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
