@@ -9,6 +9,7 @@ TARGET_DEVICE_PATH := device/xiaomi/mi89xx/mi89x7
 ## SoC
 TARGET_QCOM_SOC_FAMILY := msm8937
 ## TODO: Bringup the corresponding hardware and remove the following definitions
+TARGET_GRAPHICS ?= swiftshader
 TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
