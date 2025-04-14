@@ -11,13 +11,12 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=mi8953_a
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953
-
 BOARD_KERNEL_APPEND_DTBS := \
     qcom/msm8953-xiaomi-*.dtb \
     qcom/sdm450-xiaomi-*.dtb \
     qcom/sdm632-xiaomi-*.dtb
 
+ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 TARGET_KERNEL_CONFIG_EXT := \
     $(TARGET_DEVICE_PATH)/kconfigs/config-postmarketos-qcom-msm8953.aarch64 \
     kernel/mainline/configs/fragments/y/arm64/gki_pre.config \
@@ -27,8 +26,16 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953
+else
+TARGET_KERNEL_CONFIG := \
+    gki_defconfig \
+    mi8953.config
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-ack
+endif
 
 # Kernel modules
+ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.*))
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
@@ -43,6 +50,9 @@ RECOVERY_KERNEL_MODULES := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.drm)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.panel.*)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.touchscreen))
+else
+# TODO: $(TARGET_DEVICE_PATH)/modprobe/ack/
+endif
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := mi8953_a
