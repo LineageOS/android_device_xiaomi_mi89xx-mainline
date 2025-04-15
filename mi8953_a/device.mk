@@ -13,6 +13,7 @@ TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
 # Inherit from parent
+MI8953_USE_ANDROID_COMMON_KERNEL := true
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
 # Audio
