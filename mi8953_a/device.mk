@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-TARGET_DEVICE_PATH := device/xiaomi/mi89xx/mi8953_a
+TARGET_DEVICE_PATH := device/xiaomi/mi89xx-mainline/mi8953_a
 
 # Inherit options from mainline/qcom-common
 ## SoC
@@ -15,7 +15,7 @@ include device/mainline/qcom-common/optional/options.mk
 # Inherit from parent
 ## A/B
 AB_OTA_UPDATER := false
-$(call inherit-product, device/xiaomi/mi89xx/device.mk)
+$(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920

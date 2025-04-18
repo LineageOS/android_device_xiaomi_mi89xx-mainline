@@ -4,7 +4,7 @@
 #
 
 # Inherit from parent
-include device/xiaomi/mi89xx/BoardConfig.mk
+include device/xiaomi/mi89xx-mainline/BoardConfig.mk
 
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \

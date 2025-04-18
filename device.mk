@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/mi89xx
+DEVICE_PATH := device/xiaomi/mi89xx-mainline
 
 # Inherit from mainline/qcom-common
 $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)

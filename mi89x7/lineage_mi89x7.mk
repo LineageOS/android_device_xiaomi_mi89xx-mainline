@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from device
-$(call inherit-product, device/xiaomi/mi89xx/mi89x7/device.mk)
+$(call inherit-product, device/xiaomi/mi89xx-mainline/mi89x7/device.mk)
 
 PRODUCT_NAME := lineage_mi89x7
 PRODUCT_DEVICE := mi89x7
