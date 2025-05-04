@@ -6,17 +6,23 @@
 # Inherit from parent
 include device/xiaomi/mi89xx-mainline/BoardConfig.mk
 
+# Bootloader
+BOARD_BOOT_HEADER_VERSION := 2
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_LK2ND_MAKE_FLAGS := OSVERSION_IN_BOOTIMAGE=1
+
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=mi89x7
 
 # Kernel
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mi89x7
 
-BOARD_KERNEL_APPEND_DTBS := \
-    qcom/msm8917-xiaomi-*.dtb \
-    qcom/msm8937-xiaomi-*.dtb \
-    qcom/msm8940-xiaomi-*.dtb
+TARGET_DTB_LIST_WILDCARD := \
+    qcom/msm8917-xiaomi-* \
+    qcom/msm8937-xiaomi-* \
+    qcom/msm8940-xiaomi-*
 
 TARGET_KERNEL_CONFIG_EXT := \
     $(TARGET_DEVICE_PATH)/kconfigs/config-postmarketos-qcom-msm89x7.aarch64 \
