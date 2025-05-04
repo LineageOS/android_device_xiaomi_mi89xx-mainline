@@ -33,6 +33,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     kernel_mainline_configs_init_pristine-mainline-support
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*.kl,$(TARGET_DEVICE_PATH)/input/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/)
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.mi89x7:$(TARGET_COPY_OUT_RAMDISK)/fstab.mi89x7
