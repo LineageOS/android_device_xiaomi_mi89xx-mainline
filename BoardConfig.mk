@@ -22,7 +22,7 @@ BOARD_KERNEL_CMDLINE := \
     $(MAINLINE_COMMON_ANDROIDBOOT_PARAMS) \
     $(MAINLINE_COMMON_KERNEL_PARAMS) \
     $(MAINLINE_QCOM_KERNEL_PARAMS) \
-    androidboot.boot_devices=soc@0/7824900.mmc \
+    $(MAINLINE_QCOM_SOC_ANDROIDBOOT_PARAMS) \
     androidboot.verifiedbootstate=orange \
     console=tty0 \
     lk2nd.pass-ramoops=zap
@@ -36,17 +36,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # Kernel
-BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_IMAGE_NAME := Image.gz
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-
 ifneq ($(TARGET_LK2ND_PLATFORM),)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 endif
-
-# Partitions
-BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # Platform
 TARGET_BOARD_PLATFORM := mi89xx
