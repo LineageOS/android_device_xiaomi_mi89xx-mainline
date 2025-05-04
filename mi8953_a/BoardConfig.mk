@@ -11,10 +11,10 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=mi8953_a
 
 # Kernel
-BOARD_KERNEL_APPEND_DTBS := \
-    qcom/msm8953-xiaomi-*.dtb \
-    qcom/sdm450-xiaomi-*.dtb \
-    qcom/sdm632-xiaomi-*.dtb
+TARGET_DTB_LIST_WILDCARD := \
+    qcom/msm8953-xiaomi-* \
+    qcom/sdm450-xiaomi-* \
+    qcom/sdm632-xiaomi-*
 
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 TARGET_KERNEL_CONFIG_EXT := \

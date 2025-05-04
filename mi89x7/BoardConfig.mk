@@ -13,10 +13,10 @@ BOARD_KERNEL_CMDLINE += \
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mi89x7
 
-BOARD_KERNEL_APPEND_DTBS := \
-    qcom/msm8917-xiaomi-*.dtb \
-    qcom/msm8937-xiaomi-*.dtb \
-    qcom/msm8940-xiaomi-*.dtb
+TARGET_DTB_LIST_WILDCARD := \
+    qcom/msm8917-xiaomi-* \
+    qcom/msm8937-xiaomi-* \
+    qcom/msm8940-xiaomi-*
 
 TARGET_KERNEL_CONFIG_EXT := \
     $(TARGET_DEVICE_PATH)/kconfigs/config-postmarketos-qcom-msm89x7.aarch64 \

@@ -10,8 +10,11 @@ include device/mainline/qcom-common/BoardConfigMainlineQcomCommon.mk
 
 # Bootloader
 ifneq ($(TARGET_LK2ND_PLATFORM),)
+BOARD_BOOT_HEADER_VERSION := 2
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_LK2ND_MAKE_FLAGS := OSVERSION_IN_BOOTIMAGE=1
 endif
 
 # Boot parameters
@@ -38,6 +41,10 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_ARCH := arm64
+
+ifneq ($(TARGET_LK2ND_PLATFORM),)
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+endif
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
