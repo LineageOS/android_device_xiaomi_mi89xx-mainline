@@ -15,7 +15,7 @@ on late-fs
     mount_all --late
 
 # Set device properties
-service vendor.set_device_prop /vendor/bin/set_device_prop
+service vendor.set_device_prop /odm/bin/set_device_prop
     class early_hal
     group root
     user root

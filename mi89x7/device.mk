@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.kl,$(TARGET_DEVICE_PATH)/input/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/)
+    $(call find-copy-subdir-files,*.kl,$(TARGET_DEVICE_PATH)/input/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/)
 
 # Ramdisk
 PRODUCT_COPY_FILES += \

@@ -3,5 +3,5 @@ cc_binary {
     srcs: ["set_device_prop.cpp"],
     shared_libs: ["libbase"],
     recovery_available: true,
-    vendor: true,
+    device_specific: true,
 }
