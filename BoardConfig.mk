@@ -43,9 +43,6 @@ endif
 # Platform
 TARGET_BOARD_PLATFORM := mi89xx
 
-# Properties
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
-
 # Ramdisk
 BOARD_RAMDISK_USE_LZ4 := true
 
