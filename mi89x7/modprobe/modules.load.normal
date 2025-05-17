@@ -1,0 +1,27 @@
+# Bluetooth
+btqcomsmd
+
+# Remoteproc
+qcom_q6v5_mss
+qcom_q6v5_pas
+qcom_wcnss_pil
+
+# Sound
+apr
+q6adm
+q6afe-clocks
+q6afe-dai
+q6asm-dai
+q6cvp
+q6cvs
+q6mvm
+snd-soc-apq8016-sbc
+snd-soc-lpass-apq8016
+snd-soc-simple-amplifier
+
+# Vibrator
+pm8xxx-vibrator
+gpio-vibra
+
+# Wi-Fi
+wcn36xx
