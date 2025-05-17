@@ -1,0 +1,4 @@
+leds-aw2013.ko
+leds-qcom-flash-v1.ko
+qcom-rng.ko
+tps65132-regulator.ko
