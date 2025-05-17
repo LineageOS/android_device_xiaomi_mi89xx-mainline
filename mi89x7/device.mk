@@ -45,6 +45,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
 
+# Overlay
+PRODUCT_PACKAGES += \
+    AodDefaultOnOverlay
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.mi89x7:$(TARGET_COPY_OUT_RAMDISK)/fstab.mi89x7
