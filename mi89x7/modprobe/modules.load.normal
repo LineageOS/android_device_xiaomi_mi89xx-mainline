@@ -1,0 +1,14 @@
+# Bluetooth
+hci_uart
+
+# Remoteproc
+qcom_q6v5_mss
+qcom_q6v5_pas
+qcom_wcnss_pil
+
+# Vibrator
+pm8xxx-vibrator
+gpio-vibra
+
+# Wi-Fi
+wcn36xx
