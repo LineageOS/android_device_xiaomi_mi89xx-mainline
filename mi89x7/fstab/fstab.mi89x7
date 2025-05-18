@@ -22,8 +22,14 @@
 # Recovery
 /dev/block/by-name/recovery /recovery emmc defaults defaults
 
+# SDcard
+/devices/platform/soc@0/7864900.mmc/mmc_host/mmc* auto auto defaults voldmanaged=sdcard:auto,encryptable=userdata,noemulatedsd
+
 # System
 /dev/block/by-name/system /system ext4 noatime,ro first_stage_mount
+
+# USB
+/devices/platform/soc@0/78db000.usb/*/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
 
 # Userdata
 /dev/block/by-name/userdata /data ext4 nodev,noatime,nosuid,discard latemount,check,quota,formattable
