@@ -53,6 +53,8 @@ RECOVERY_KERNEL_MODULES := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.drm)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.panel.*)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.touchscreen))
+SYSTEM_KERNEL_MODULES := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.include.system))
 else
 # TODO: $(TARGET_DEVICE_PATH)/modprobe/ack/
 endif
