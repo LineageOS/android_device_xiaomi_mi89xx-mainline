@@ -37,7 +37,10 @@ endif
 # Kernel modules
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.*))
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.basic)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.drm)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.panel.*)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.touchscreen))
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.basic)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.drm)) \
