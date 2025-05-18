@@ -6,7 +6,7 @@
 TARGET_DEVICE_PATH := device/xiaomi/mi89xx-mainline/mi89x7
 
 # Inherit options from mainline/qcom-common
-## SoC
+TARGET_HAS_IR := true
 TARGET_QCOM_SOC_FAMILY := msm8937
 ## TODO: Bringup the corresponding hardware and remove the following definitions
 TARGET_GRAPHICS ?= swiftshader

@@ -4,6 +4,11 @@ btqcomsmd
 # LED
 leds-qcom-flash-v1
 
+# Remote controller
+gpio-ir-tx
+ir-spi
+pwm-ir-tx
+
 # Remoteproc
 qcom_q6v5_mss
 qcom_q6v5_pas
