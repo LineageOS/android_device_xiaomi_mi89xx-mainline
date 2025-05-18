@@ -39,7 +39,8 @@ PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/init/init.mi89x7.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi89x7.rc
 
 PRODUCT_PACKAGES += \
-    kernel_mainline_configs_init_pristine-mainline-support
+    kernel_mainline_configs_init_pristine-mainline-support \
+    zram.rc
 
 # Input
 PRODUCT_COPY_FILES += \

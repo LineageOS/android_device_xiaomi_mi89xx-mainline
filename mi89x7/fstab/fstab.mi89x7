@@ -31,3 +31,6 @@
 
 # Vendor
 /dev/block/by-name/cust /vendor ext4 noatime,ro first_stage_mount
+
+# ZRAM
+/dev/block/zram0 none swap defaults zramsize=50%
