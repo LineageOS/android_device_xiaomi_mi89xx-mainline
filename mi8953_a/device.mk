@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 PRODUCT_PACKAGES += \
-    kernel_mainline_configs_init_pristine-mainline-support
+    use_memfd.rc
 endif
 
 # Ramdisk
