@@ -45,6 +45,8 @@ RECOVERY_KERNEL_MODULES := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.drm)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.power_supply)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.touchscreen))
+SYSTEM_KERNEL_MODULES := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.include.system))
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := mi89x7
