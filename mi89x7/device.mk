@@ -18,6 +18,10 @@ include device/mainline/qcom-common/optional/options.mk
 AB_OTA_UPDATER := false
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
+# Audio
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*.xml,$(TARGET_DEVICE_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc/)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
