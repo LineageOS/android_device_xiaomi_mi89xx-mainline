@@ -44,7 +44,6 @@ PRODUCT_COPY_FILES += \
 
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 PRODUCT_PACKAGES += \
-    use_memfd.rc \
     zram.rc
 endif
 
