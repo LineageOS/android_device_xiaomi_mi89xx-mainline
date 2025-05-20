@@ -37,26 +37,43 @@ else
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     mi8953.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-mainline-ack
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-ack
 endif
 
 # Kernel modules
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.basic)) \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.drm)) \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.panel.*)) \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.touchscreen))
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.load.basic)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.load.drm)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.load.panel.*)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.load.touchscreen))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 RECOVERY_KERNEL_MODULES := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.include_dep.basic)) \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.include_dep.drm)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.include_dep.basic)) \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.include_dep.drm)) \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 SYSTEM_KERNEL_MODULES := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.include.system))
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.include.system))
 else
-# TODO: $(TARGET_DEVICE_PATH)/modprobe/ack/
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.system_dlkm))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.vendor))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.vendor_dlkm))
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.recovery))
+BOOT_KERNEL_MODULES := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.vendor_dlkm))
+RECOVERY_KERNEL_MODULES := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.recovery))
+SYSTEM_KERNEL_MODULES := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.system_dlkm))
+
+# Some kernel modules return an error at modprobe time
+# TODO: Move non-critical modules to vendor
+BOARD_KERNEL_CMDLINE += androidboot.first_stage_console=2
 endif
 
 # OTA
