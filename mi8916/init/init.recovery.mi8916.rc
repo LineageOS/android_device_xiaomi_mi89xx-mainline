@@ -3,8 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-import /init.recovery.mi89xx.rc
-
 # Input (ts_vkeys)
 on property:ro.vendor.device.codename=wt88047
     setprop vendor.ts_vkeys.menu.x 160

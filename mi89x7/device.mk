@@ -16,8 +16,9 @@ include device/mainline/qcom-common/optional/options.mk
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
 # Audio
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.xml,$(TARGET_DEVICE_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc/)
+PRODUCT_PACKAGES += \
+    audio.mi89x7.xml \
+    audio.xiaomi-ugg.xml
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
@@ -31,20 +32,21 @@ PRODUCT_PACKAGES += \
     all_symlink_firmware_mi89x7
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/fstab/fstab.mi89x7:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mi89x7 \
-    $(TARGET_DEVICE_PATH)/init/init.mi89x7.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi89x7.rc
+PRODUCT_PACKAGES += \
+    fstab.mi89x7 \
+    fstab.mi89x7.ramdisk \
+    init.mi89x7.rc
 
 PRODUCT_PACKAGES += \
     zram.rc
 
 # Input
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.kl,$(TARGET_DEVICE_PATH)/input/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/)
+PRODUCT_PACKAGES += \
+    Goodix_Capacitive_TouchScreen.kl
 
 # Kernel
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
+PRODUCT_PACKAGES += \
+    modules.load.normal
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -52,14 +54,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     AodDefaultOnOverlay
-
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/fstab/fstab.mi89x7:$(TARGET_COPY_OUT_RAMDISK)/fstab.mi89x7
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/init/init.recovery.mi89x7.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mi89x7.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

@@ -3,8 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-import /system/etc/init/hw/init.recovery.mainline.qcom.rc
-
 # Set device properties
 on init
     exec u:r:vendor_set_device_prop:s0 -- /system/bin/set_device_prop
