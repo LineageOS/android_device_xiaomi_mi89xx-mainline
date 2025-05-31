@@ -1,0 +1,3 @@
+drm_display_helper.ko
+drm_exec.ko
+gpu-sched.ko
