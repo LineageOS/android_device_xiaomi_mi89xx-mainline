@@ -28,6 +28,9 @@ const std::string kPropSocFamily = "ro.vendor.device.soc_family";
 const device_info_t device_info_table[] = {
         // clang-format off
 
+    // mi8916
+    {"wt88047", 320},
+
     // Mi8917
     {"riva", 280},
     {"rolex", 280},
@@ -113,9 +116,10 @@ int main() {
     }
 
     for (const auto& compatible : compatibles) {
-        if (StartsWith(compatible, "xiaomi,")) {
+        if (StartsWith(compatible, "wingtech,") ||
+            StartsWith(compatible, "xiaomi,")) {
             if (!device_codename.empty()) continue;
-            device_codename = compatible.substr(7);
+            device_codename = compatible.substr(compatible.find_first_of(",") + 1);
             std::cout << "Device codename: " << device_codename << std::endl;
             ret &= SetProperty(kPropCodename, device_codename);
         } else if (StartsWith(compatible, "qcom,")) {
