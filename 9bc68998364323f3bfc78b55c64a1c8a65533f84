@@ -16,6 +16,24 @@
       "message": "Wouldnt it be better to use androidboot.partition_map in this case?",
       "revId": "9bc68998364323f3bfc78b55c64a1c8a65533f84",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "17aa5095_88030274",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-06-01T22:35:29Z",
+      "side": 1,
+      "message": "I\u0027m not sure if that\u0027d work for overriding \u0026 it\u0027s better for us to save kernel cmdline buffer space",
+      "parentUuid": "13d16f73_42ae2239",
+      "revId": "9bc68998364323f3bfc78b55c64a1c8a65533f84",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
