@@ -32,6 +32,9 @@ PRODUCT_PACKAGES += \
     use_memfd.rc \
     zram.rc
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.mi8916:$(TARGET_COPY_OUT_RAMDISK)/fstab.mi8916
