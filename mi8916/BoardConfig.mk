@@ -26,7 +26,8 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/common.config \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
-    kernel/mainline/configs/fragments/n/faster-build-time.config
+    kernel/mainline/configs/fragments/n/faster-build-time.config \
+    $(TARGET_DEVICE_PATH)/kconfigs/fixups.config
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
