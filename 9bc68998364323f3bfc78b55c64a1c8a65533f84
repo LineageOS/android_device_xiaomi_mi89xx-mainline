@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13d16f73_42ae2239",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2025-06-01T16:34:45Z",
+      "side": 1,
+      "message": "Wouldnt it be better to use androidboot.partition_map in this case?",
+      "revId": "9bc68998364323f3bfc78b55c64a1c8a65533f84",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
