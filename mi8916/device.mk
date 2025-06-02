@@ -39,7 +39,6 @@ PRODUCT_PACKAGES += \
     ueventd.mi8916.rc
 
 PRODUCT_PACKAGES += \
-    use_memfd.rc \
     zram.rc
 
 $(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
