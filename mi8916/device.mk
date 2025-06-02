@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     use_memfd.rc \
     zram.rc
 
+# Overlay
+PRODUCT_PACKAGES += \
+    AodDefaultOnOverlay
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
