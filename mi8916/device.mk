@@ -36,6 +36,12 @@ PRODUCT_PACKAGES += \
     use_memfd.rc \
     zram.rc
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*.kl,$(TARGET_DEVICE_PATH)/input/,$(TARGET_COPY_OUT_ODM)/usr/keylayout/)
+
+TARGET_TOUCHSCREEN_HAS_VIRTUAL_KEYS := true
+
 # Kernel
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
