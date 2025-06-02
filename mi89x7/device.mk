@@ -61,4 +61,5 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    $(TARGET_DEVICE_PATH) \
     kernel/mainline/configs
