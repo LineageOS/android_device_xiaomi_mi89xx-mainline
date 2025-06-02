@@ -32,7 +32,6 @@
 /devices/platform/soc@0/78d9000.usb/*/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
 
 # Userdata
-/dev/block/platform/soc@0/7864900.mmc/mmcblk1 /data ext4 nodev,noatime,nosuid,discard latemount,wait,check,quota,formattable
 /dev/block/platform/soc@0/7864900.mmc/mmcblk1 /data f2fs nodev,noatime,nosuid,discard,reserve_root=32768 latemount,wait,check,quota,formattable
 
 # Vendor
