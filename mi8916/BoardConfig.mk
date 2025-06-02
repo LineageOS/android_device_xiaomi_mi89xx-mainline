@@ -6,6 +6,9 @@
 # Inherit from parent
 include device/xiaomi/mi89xx-mainline/BoardConfig.mk
 
+# A/B
+AB_OTA_UPDATER := false
+
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=mi8916

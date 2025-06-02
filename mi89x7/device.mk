@@ -14,8 +14,6 @@ TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
 # Inherit from parent
-## A/B
-AB_OTA_UPDATER := false
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
 # Audio
