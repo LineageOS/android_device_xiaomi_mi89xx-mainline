@@ -33,7 +33,6 @@ PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/init/init.mi8916.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi8916.rc
 
 PRODUCT_PACKAGES += \
-    use_memfd.rc \
     zram.rc
 
 # Input
