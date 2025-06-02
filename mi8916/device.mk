@@ -8,12 +8,15 @@ TARGET_DEVICE_PATH := device/xiaomi/mi89xx-mainline/mi8916
 # Inherit options from mainline/qcom-common
 TARGET_QCOM_SOC_FAMILY := msm8916
 ## TODO: Bringup the corresponding hardware and remove the following definitions
-TARGET_AUDIO_HAL := default-aidl
 TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
 # Inherit from parent
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
+
+# Audio
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*.xml,$(TARGET_DEVICE_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc/)
 
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
