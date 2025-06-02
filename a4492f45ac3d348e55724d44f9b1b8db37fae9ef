@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94b5db82_15a65747",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-06-02T18:58:49Z",
+      "side": 1,
+      "message": "[  604.570767] q6asm-dai 4080000.remoteproc:smd-edge:apr:service@7:dais: q6asm_dai_prepare: private data null or audio client freed\n\n[  604.586366] q6asm-dai 4080000.remoteproc:smd-edge:apr:service@7:dais: ASoC error (-22): at snd_soc_pcm_component_prepare() on 4080000.remoteproc:smd-edge:apr:service@7:dais",
+      "revId": "a4492f45ac3d348e55724d44f9b1b8db37fae9ef",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
