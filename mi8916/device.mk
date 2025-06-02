@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
     use_memfd.rc \
     zram.rc
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
