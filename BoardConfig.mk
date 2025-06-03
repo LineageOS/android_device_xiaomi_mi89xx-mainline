@@ -11,10 +11,12 @@ include device/mainline/qcom-common/BoardConfigMainlineQcomCommon.mk
 # Bootloader
 ifneq ($(TARGET_LK2ND_PLATFORM),)
 BOARD_BOOT_HEADER_VERSION := 2
-BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_LK2ND_MAKE_FLAGS := OSVERSION_IN_BOOTIMAGE=1
+ifneq ($(TARGET_LK2ND_DOES_NOT_SPLIT_BOOT_PARTITION),true)
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
+endif
 endif
 
 # Boot parameters

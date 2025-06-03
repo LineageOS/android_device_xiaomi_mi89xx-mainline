@@ -4,10 +4,14 @@
 #
 
 # Inherit from parent
+TARGET_LK2ND_DOES_NOT_SPLIT_BOOT_PARTITION := true
 include device/xiaomi/mi89xx-mainline/BoardConfig.mk
 
 # A/B
 AB_OTA_UPDATER := false
+
+# Bootloader (lk2nd)
+TARGET_LK2ND_PLATFORM := mi8916
 
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \
