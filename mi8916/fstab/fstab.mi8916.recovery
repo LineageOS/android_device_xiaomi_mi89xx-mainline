@@ -7,14 +7,14 @@
 /dev/block/mapper/boot /boot emmc defaults defaults
 
 # Cache
-/dev/block/by-name/cache /cache ext4 nodev,noatime,nosuid,discard,offset=159383552 check
-/dev/block/by-name/cache /cache f2fs nodev,noatime,nosuid,discard,offset=159383552 check
+/dev/block/mapper/cache /cache ext4 nodev,noatime,nosuid,discard check,formattable
+/dev/block/mapper/cache /cache f2fs nodev,noatime,nosuid,discard check,formattable
 
 # Firmware
 /dev/block/by-name/modem /vendor/firmware_mnt vfat ro,context=u:object_r:firmware_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337 defaults
 
 # Metadata
-/dev/block/by-name/cache /metadata ext4 nodev,noatime,nosuid,discard,data=journal,commit=1,offset=125829120 check,first_stage_mount,metadata_csum
+/dev/block/mapper/metadata /metadata ext4 nodev,noatime,nosuid,discard,data=journal,commit=1 check,formattable,metadata_csum
 
 # Misc
 /dev/block/by-name/misc /misc emmc defaults defaults
