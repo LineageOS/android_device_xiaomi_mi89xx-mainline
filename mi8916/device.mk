@@ -57,6 +57,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/init/init.recovery.mi8916.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mi8916.rc
 
+PRODUCT_PACKAGES += \
+    dmctl.recovery
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(TARGET_DEVICE_PATH) \
