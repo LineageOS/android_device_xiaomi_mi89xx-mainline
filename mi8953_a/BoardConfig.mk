@@ -29,12 +29,12 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-mainline
 else
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     mi8953.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-ack
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-mainline-ack
 endif
 
 # Kernel modules
