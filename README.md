@@ -14,3 +14,13 @@
 - `Revert "staging: remove ashmem"` (Fixes media codec)
 - `Revert "dm: fix copying after src array boundaries"` (Fixes kernel crash during APEX mount on 6.15+)
 - `Revert "dm: always update the array size in realloc_argv on success"` (Fixes kernel crash during APEX mount on 6.15+)
+
+## Notes for `mi8916` target
+
+- The target may boot only on Redmi 2 (`wt88047`) as of now.
+- The target uses SD card for `/data` mountpoint. Make sure to have a SD card with 2 GB size at minimum inserted.
+
+## Notes for `mi89x7` target
+
+- The target uses tinyhal audio HAL by default, however not all devices has tinyhal configuration file yet. To boot on the unsupported devices, run `export TARGET_AUDIO_HAL=default-aidl`.
+- The target uses Swiftshader graphics by default, due to the fact that Mesa does not work properly on devices with Adreno 505 GPU. To get smoother graphics experience on devices with Adreno 306 GPU, run `export TARGET_GRAPHICS=mesa`.
