@@ -14,6 +14,8 @@
 - `Revert "staging: remove ashmem"` (Fixes media codec)
 - `Revert "dm: fix copying after src array boundaries"` (Fixes kernel crash during APEX mount on 6.15+)
 - `Revert "dm: always update the array size in realloc_argv on success"` (Fixes kernel crash during APEX mount on 6.15+)
+- `Revert "remoteproc: qcom_wcnss: Fix on platforms without fallback regulators"` (Fixes qcom-wcnss-pil probe error on 6.15+)
+- `Revert "remoteproc: qcom_wcnss: Handle platforms with only single power domain"` (Fixes qcom-wcnss-pil probe error on 6.15+)
 
 ## Notes for `mi8916` target
 
