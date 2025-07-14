@@ -59,14 +59,14 @@
             <ctl name="RX1 MIX1 INP1" val="RX1"/>
             <ctl name="RX2 MIX1 INP1" val="RX2"/>
             <ctl name="RDAC2 MUX" val="RX2"/>
-            <ctl name="HPHL" val="1"/>
-            <ctl name="HPHR" val="1"/>
+            <ctl name="HPHL" val="Switch"/>
+            <ctl name="HPHR" val="Switch"/>
             <ctl name="Headphones Switch" val="1"/>
         </path>
         <path name="off">
             <ctl name="Headphones Switch" val="0"/>
-            <ctl name="HPHL" val="0"/>
-            <ctl name="HPHR" val="0"/>
+            <ctl name="HPHL" val="ZERO"/>
+            <ctl name="HPHR" val="ZERO"/>
             <ctl name="RX1 MIX1 INP1" val="ZERO"/>
             <ctl name="RX2 MIX1 INP1" val="ZERO"/>
         </path>
@@ -88,14 +88,14 @@
             <ctl name="RX1 MIX1 INP1" val="RX1"/>
             <ctl name="RX2 MIX1 INP1" val="RX2"/>
             <ctl name="RDAC2 MUX" val="RX2"/>
-            <ctl name="HPHL" val="1"/>
-            <ctl name="HPHR" val="1"/>
+            <ctl name="HPHL" val="Switch"/>
+            <ctl name="HPHR" val="Switch"/>
             <ctl name="Headphones Switch" val="1"/>
         </path>
         <path name="off">
             <ctl name="Headphones Switch" val="0"/>
-            <ctl name="HPHL" val="0"/>
-            <ctl name="HPHR" val="0"/>
+            <ctl name="HPHL" val="ZERO"/>
+            <ctl name="HPHR" val="ZERO"/>
             <ctl name="RX1 MIX1 INP1" val="ZERO"/>
             <ctl name="RX2 MIX1 INP1" val="ZERO"/>
         </path>
@@ -148,12 +148,12 @@
         <path name="on">
             <ctl name="RX1 MIX1 INP1" val="RX1"/>
             <ctl name="RDAC2 MUX" val="RX2"/>
-            <ctl name="HPHL" val="1"/>
+            <ctl name="HPHL" val="Switch"/>
             <ctl name="Speaker Switch" val="1"/>
         </path>
         <path name="off">
             <ctl name="Speaker Switch" val="0"/>
-            <ctl name="HPHL" val="0"/>
+            <ctl name="HPHL" val="ZERO"/>
             <ctl name="RX1 MIX1 INP1" val="ZERO"/>
         </path>
         <path name="compress_on">
