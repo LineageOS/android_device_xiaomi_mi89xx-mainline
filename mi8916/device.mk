@@ -46,6 +46,10 @@ TARGET_TOUCHSCREEN_HAS_VIRTUAL_KEYS := true
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(TARGET_DEVICE_PATH)/overlays/overlay
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 
