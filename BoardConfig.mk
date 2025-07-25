@@ -50,8 +50,8 @@ TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 BOARD_RAMDISK_USE_LZ4 := true
 
 # SELinux
-BOARD_ODM_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy/odm
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(DEVICE_PATH)/sepolicy/vendor
 
 # VINTF
 DEVICE_MANIFEST_FILE := \
