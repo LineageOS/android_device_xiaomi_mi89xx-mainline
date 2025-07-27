@@ -2,4 +2,8 @@
     <codec_probe file="/proc/asound/card0/id">
         <case name="xiaomiugg" file="audio.xiaomi-ugg.xml" />
     </codec_probe>
+    <mixer card="0">
+    </mixer>
+    <stream type="pcm" dir="out" card="0" device="0">
+    </stream>
 </audiohal>
