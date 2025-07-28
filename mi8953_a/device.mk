@@ -25,6 +25,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Firmware
 PRODUCT_PACKAGES += \
+    all_symlink_firmware_mi8953_a \
     all_symlink_firmware_mi89x7
 
 $(foreach device,markw mido vince ysl rosy onclite,\
