@@ -19,6 +19,7 @@
 - `Revert "usb: dwc3: remove unused sg struct member"` (Fixes USB Gadget data transfer on 6.13+ on msm8953)
 - `Revert "usb: dwc3: gadget: Remove dwc3_request->needs_extra_trb"` (Fixes USB Gadget data transfer on 6.13+ on msm8953)
 - `Revert "usb: dwc3: gadget: Cleanup SG handling"` (Fixes USB Gadget data transfer on 6.13+ on msm8953)
+- `Revert "drm/msm/dpu: move scaling limitations out of the hw_catalog"` (Fixes tearing display on 6.13+)
 
 ## Notes for `mi8916` target
 
