@@ -16,6 +16,9 @@
 - `Revert "dm: always update the array size in realloc_argv on success"` (Fixes kernel crash during APEX mount on 6.15+)
 - `Revert "remoteproc: qcom_wcnss: Fix on platforms without fallback regulators"` (Fixes qcom-wcnss-pil probe error on 6.15+)
 - `Revert "remoteproc: qcom_wcnss: Handle platforms with only single power domain"` (Fixes qcom-wcnss-pil probe error on 6.15+)
+- `Revert "usb: dwc3: remove unused sg struct member"` (Fixes USB Gadget data transfer on 6.13+ on msm8953)
+- `Revert "usb: dwc3: gadget: Remove dwc3_request->needs_extra_trb"` (Fixes USB Gadget data transfer on 6.13+ on msm8953)
+- `Revert "usb: dwc3: gadget: Cleanup SG handling"` (Fixes USB Gadget data transfer on 6.13+ on msm8953)
 
 ## Notes for `mi8916` target
 
