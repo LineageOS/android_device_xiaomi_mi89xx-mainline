@@ -45,6 +45,12 @@ PRODUCT_PACKAGES += \
     zram.rc
 endif
 
+# Kernel
+ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
+PRODUCT_COPY_FILES += \
+    $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
+endif
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.mi8953_a:$(TARGET_COPY_OUT_RAMDISK)/fstab.mi8953_a
