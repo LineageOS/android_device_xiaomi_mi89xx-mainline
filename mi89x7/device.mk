@@ -47,6 +47,9 @@ PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
 
 # Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(TARGET_DEVICE_PATH)/overlays/overlay
+
 PRODUCT_PACKAGES += \
     AodDefaultOnOverlay
 
