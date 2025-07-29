@@ -44,9 +44,12 @@ const device_info_t device_info_table[] = {
     {"ugg", 260},
 
     // Xiaomi MSM8953
+    {"daisy", 420},
     {"oxygen", 342},
     {"uter", 400},
+    {"sakura", 420},
     {"vince", 440},
+    {"ysl", 280},
 
         // clang-format on
 };
