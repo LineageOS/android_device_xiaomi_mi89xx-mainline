@@ -1,8 +1,27 @@
 # Bluetooth
 btqcomsmd
 
+# Camera
+i2c_qcom_cci
+qcom_camss
+
+# Camera sensors
+ov5675
+
+# Media
+venus_dec
+venus_enc
+
+# Modem
+ipa2_lite
+rmtfs_mem
+
+# PMIC
+qcom_spmi_temp_alarm
+qcom_spmi_vadc
+
 # QRTR
-qrtr
+qrtr_smd
 
 # Remote controller
 pwm-ir-tx
@@ -11,6 +30,16 @@ pwm-ir-tx
 qcom_q6v5_mss
 qcom_q6v5_pas
 qcom_wcnss_pil
+
+# Sensors
+ak8975
+bmi160_i2c
+ltrf216a
+st_lsm6dsx_i2c
+st_lsm6dsx_spi
+
+# SoC
+qcom_memshare
 
 # Sound
 snd-soc-apq8016-sbc
