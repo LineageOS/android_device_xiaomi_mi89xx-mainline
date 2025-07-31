@@ -4,6 +4,10 @@ btqcomsmd
 # LED
 leds-qcom-flash-v1
 
+# Media
+venus_dec
+venus_enc
+
 # Remote controller
 gpio-ir-tx
 ir-spi
@@ -13,6 +17,12 @@ pwm-ir-tx
 qcom_q6v5_mss
 qcom_q6v5_pas
 qcom_wcnss_pil
+
+# SoC
+qcom_bam_dmux
+qcom_memshare
+qcom_pd_mapper
+qcom_sns_reg
 
 # Sound
 snd-soc-apq8016-sbc
