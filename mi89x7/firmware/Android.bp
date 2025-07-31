@@ -137,6 +137,48 @@ install_symlink {
 }
 
 install_symlink {
+    name: "symlink_firmware_mi89x7_venus.b00",
+    vendor: true,
+    installed_location: "firmware/venus.b00",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b00",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi89x7_venus.b01",
+    vendor: true,
+    installed_location: "firmware/venus.b01",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b01",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi89x7_venus.b02",
+    vendor: true,
+    installed_location: "firmware/venus.b02",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b02",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi89x7_venus.b03",
+    vendor: true,
+    installed_location: "firmware/venus.b03",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b03",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi89x7_venus.b04",
+    vendor: true,
+    installed_location: "firmware/venus.b04",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b04",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi89x7_venus.mdt",
+    vendor: true,
+    installed_location: "firmware/venus.mdt",
+    symlink_target: "/vendor/firmware_mnt/image/venus.mdt",
+}
+
+install_symlink {
     name: "symlink_firmware_mi89x7_wcnss.b00",
     vendor: true,
     installed_location: "firmware/wcnss.b00",
@@ -256,6 +298,12 @@ phony {
         "symlink_firmware_mi89x7_adsp.mdt",
         "symlink_firmware_mi89x7_mba.mbn",
         "symlink_firmware_mi89x7_modem_pr",
+        "symlink_firmware_mi89x7_venus.b00",
+        "symlink_firmware_mi89x7_venus.b01",
+        "symlink_firmware_mi89x7_venus.b02",
+        "symlink_firmware_mi89x7_venus.b03",
+        "symlink_firmware_mi89x7_venus.b04",
+        "symlink_firmware_mi89x7_venus.mdt",
         "symlink_firmware_mi89x7_wcnss.b00",
         "symlink_firmware_mi89x7_wcnss.b01",
         "symlink_firmware_mi89x7_wcnss.b02",
