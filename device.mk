@@ -18,7 +18,8 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mi89xx.rc \
-    init.recovery.mi89xx.rc
+    init.recovery.mi89xx.rc \
+    ueventd.mi89xx.rc
 
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false

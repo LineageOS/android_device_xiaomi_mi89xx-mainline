@@ -35,7 +35,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mi89x7 \
     fstab.mi89x7.ramdisk \
-    init.mi89x7.rc
+    init.mi89x7.rc \
+    ueventd.mi89x7.rc
 
 PRODUCT_PACKAGES += \
     zram.rc

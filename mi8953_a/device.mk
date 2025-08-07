@@ -42,7 +42,8 @@ $(foreach device,markw mido vince ysl rosy onclite,\
 PRODUCT_PACKAGES += \
     fstab.mi8953_a \
     fstab.mi8953_a.ramdisk \
-    init.mi8953_a.rc
+    init.mi8953_a.rc \
+    ueventd.mi8953_a.rc
 
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 PRODUCT_PACKAGES += \

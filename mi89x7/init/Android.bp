@@ -9,3 +9,9 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "ueventd.mi89x7.rc",
+    src: "ueventd.mi89x7.rc",
+    vendor: true,
+}
