@@ -15,6 +15,7 @@ BOARD_KERNEL_CMDLINE += \
 
 # Kernel
 TARGET_DTB_LIST_WILDCARD := \
+    qcom/msm8953-xiaomi-daisy \
     qcom/msm8953-xiaomi-markw \
     qcom/msm8953-xiaomi-mido \
     qcom/msm8953-xiaomi-vince \
