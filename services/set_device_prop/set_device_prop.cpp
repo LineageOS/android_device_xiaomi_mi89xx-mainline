@@ -52,28 +52,6 @@ const std::unordered_map<std::string, device_info_t> kDeviceInfoMap = {
         // clang-format on
 };
 
-const std::unordered_map<std::string, std::string> kSocFamilyMap = {
-        // clang-format off
-    {"msm8916", "msm8916"},
-    {"msm8917", "msm8937"},
-    {"msm8920", "msm8937"},
-    {"msm8929", "msm8916"},
-    {"msm8937", "msm8937"},
-    {"msm8939", "msm8916"},
-    {"msm8940", "msm8937"},
-    {"msm8952", "msm8952"},
-    {"msm8953", "msm8953"},
-    {"msm8956", "msm8952"},
-    {"msm8976", "msm8952"},
-    {"msm8996", "msm8996"},
-    {"qm215", "msm8937"},
-    {"sdm429", "msm8937"},
-    {"sdm439", "msm8937"},
-    {"sdm450", "msm8953"},
-    {"sdm632", "msm8953"},
-        // clang-format on
-};
-
 std::vector<std::string> readDtCompatible(const std::string& filename) {
     std::vector<std::string> result;
     std::ifstream file(filename, std::ios::binary);
@@ -115,38 +93,18 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    std::string device_codename, device_soc;
+    std::string device_codename;
     for (const auto& compatible : compatibles) {
         if (StartsWith(compatible, "wingtech,") || StartsWith(compatible, "xiaomi,")) {
             if (!device_codename.empty()) continue;
             device_codename = compatible.substr(compatible.find_first_of(",") + 1);
             std::cout << "Device codename: " << device_codename << std::endl;
             ret &= SetProperty(kPropPrefix + "codename", device_codename);
-        } else if (StartsWith(compatible, "qcom,")) {
-            if (!device_soc.empty()) continue;
-            device_soc = compatible.substr(5);
-            std::cout << "SoC: " << device_soc << std::endl;
-            ret &= SetProperty(kPropPrefix + "soc", device_soc);
         }
     }
 
     if (device_codename.empty()) {
         std::cout << "Failed to get device codename" << std::endl;
-        return EXIT_FAILURE;
-    }
-
-    if (device_soc.empty()) {
-        std::cout << "Failed to get device SoC" << std::endl;
-        return EXIT_FAILURE;
-    }
-
-    const std::string* device_soc_family;
-    if (kSocFamilyMap.find(device_soc) != kSocFamilyMap.end()) {
-        device_soc_family = &kSocFamilyMap.at(device_soc);
-        std::cout << "SoC Family: " << *device_soc_family << std::endl;
-        ret &= SetProperty(kPropPrefix + "soc_family", *device_soc_family);
-    } else {
-        std::cout << "Failed to match SoC family" << std::endl;
         return EXIT_FAILURE;
     }
 
