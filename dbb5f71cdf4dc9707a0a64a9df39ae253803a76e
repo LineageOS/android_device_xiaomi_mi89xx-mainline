@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c9fd1cd_edc9637d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-07T03:18:21Z",
+      "side": 1,
+      "message": "tissot is A/B device, doesn\u0027t belong to this target",
+      "revId": "dbb5f71cdf4dc9707a0a64a9df39ae253803a76e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
