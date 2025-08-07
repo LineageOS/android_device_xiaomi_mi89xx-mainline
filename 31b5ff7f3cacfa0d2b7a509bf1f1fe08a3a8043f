@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b09d0ca_d71b28ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-07T02:37:33Z",
+      "side": 1,
+      "message": "a506_zap.* is signed and is device-specific",
+      "revId": "31b5ff7f3cacfa0d2b7a509bf1f1fe08a3a8043f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
