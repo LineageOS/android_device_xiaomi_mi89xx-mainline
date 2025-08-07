@@ -16,6 +16,24 @@
       "message": "a506_zap.* is signed and is device-specific",
       "revId": "31b5ff7f3cacfa0d2b7a509bf1f1fe08a3a8043f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "765e2648_cb380fae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-08-07T02:57:04Z",
+      "side": 1,
+      "message": "https://github.com/TheMuppets/proprietary_vendor_xiaomi_msm8953-common/tree/lineage-20/proprietary/vendor/firmware\n\nKept using daisy one for years w/o issues for all the devices",
+      "parentUuid": "7b09d0ca_d71b28ad",
+      "revId": "31b5ff7f3cacfa0d2b7a509bf1f1fe08a3a8043f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
