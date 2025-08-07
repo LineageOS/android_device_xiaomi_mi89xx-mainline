@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b609976_85314ac2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-08-07T02:52:39Z",
+      "side": 1,
+      "message": "fyi I moved the recovery scripts to /system/etc/init instead of ./hw, they will be imported w/o an `import` statement\n\niirc prebuilt_root + `recovery: true` gives you `/system/\u003cfile\u003e`, being completely useless",
+      "parentUuid": "d91d2957_35289cb8",
+      "revId": "c6a04b97940a3dd37b9ef11ae6b9bd2e6142d496",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05a883cd_4dd1ef20",
