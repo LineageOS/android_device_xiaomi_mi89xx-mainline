@@ -16,8 +16,11 @@ include device/mainline/qcom-common/optional/options.mk
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
 # Audio
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*.xml,$(TARGET_DEVICE_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc/)
+PRODUCT_PACKAGES += \
+    audio.mi8953_a.xml \
+    audio.xiaomi-mido.xml \
+    audio.xiaomi-onclite.xml \
+    audio.xiaomi-vince.xml
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -28,8 +31,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Firmware
 PRODUCT_PACKAGES += \
-    all_symlink_firmware_mi8953_a \
-    all_symlink_firmware_mi89x7
+    all_symlink_firmware_mi8953_a
 
 $(foreach device,markw mido vince ysl rosy onclite,\
     $(foreach file,a506_zap.b00 a506_zap.b01 a506_zap.b02 a506_zap.mdt,\
@@ -38,10 +40,11 @@ $(foreach device,markw mido vince ysl rosy onclite,\
         $(eval $(if $(wildcard $(_src)),PRODUCT_COPY_FILES += $(_src):$(_dst),$(warning $(_src) not found)))))
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/fstab/fstab.mi8953_a:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mi8953_a \
-    $(TARGET_DEVICE_PATH)/init/init.mi8953_a.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi8953_a.rc \
-    $(TARGET_DEVICE_PATH)/init/ueventd.mi8953_a.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.mi8953_a.rc
+PRODUCT_PACKAGES += \
+    fstab.mi8953_a \
+    fstab.mi8953_a.ramdisk \
+    init.mi8953_a.rc \
+    ueventd.mi8953_a.rc
 
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 PRODUCT_PACKAGES += \
@@ -50,24 +53,15 @@ endif
 
 # Kernel
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/modprobe/modules.load.normal:$(TARGET_COPY_OUT_VENDOR)/etc/modules.load.normal
+PRODUCT_PACKAGES += \
+    modules.load.normal
 endif
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(TARGET_DEVICE_PATH)/overlays/overlay
 
-# Ramdisk
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/fstab/fstab.mi8953_a:$(TARGET_COPY_OUT_RAMDISK)/fstab.mi8953_a
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(TARGET_DEVICE_PATH)/init/init.recovery.mi8953_a.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mi8953_a.rc
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(TARGET_DEVICE_PATH) \
-    device/xiaomi/mi89xx-mainline/mi89x7 \
     kernel/mainline/configs
