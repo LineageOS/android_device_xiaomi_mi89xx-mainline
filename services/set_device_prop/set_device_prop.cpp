@@ -4,57 +4,55 @@
 #include <unordered_map>
 #include <vector>
 
+#include <stdlib.h>
+
 #include <android-base/properties.h>
 #include <android-base/strings.h>
-
-#ifndef ARRAY_SIZE
-#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
-#endif
 
 using android::base::SetProperty;
 using android::base::StartsWith;
 
+const std::string kDtCompatiblePath = "/sys/firmware/devicetree/base/compatible";
+const std::string kPropPrefix = "ro.vendor.device.";
+
 typedef struct device_info {
-    std::string codename;
     unsigned int lcd_density;
 } device_info_t;
 
-const std::string kDtCompatiblePath = "/sys/firmware/devicetree/base/compatible";
-const std::string kPropCodename = "ro.vendor.device.codename";
-const std::string kPropLcdDensity = "ro.vendor.device.lcd_density";
-const std::string kPropSoc = "ro.vendor.device.soc";
-const std::string kPropSocFamily = "ro.vendor.device.soc_family";
+const device_info_t kFallbackDeviceInfo = {
+        .lcd_density = 320,
+};
 
-const device_info_t device_info_table[] = {
+const std::unordered_map<std::string, device_info_t> kDeviceInfoMap = {
         // clang-format off
 
     // mi8916
-    {"wt88047", 320},
+    {"wt88047", {320}},
 
     // Mi8917
-    {"riva", 280},
-    {"rolex", 280},
-    {"tiare", 280},
-    {"ugglite", 260},
+    {"riva", {280}},
+    {"rolex", {280}},
+    {"tiare", {280}},
+    {"ugglite", {260}},
 
     // Mi8937
-    {"land", 280},
-    {"prada", 280},
-    {"santoni", 280},
-    {"ugg", 260},
+    {"land", {280}},
+    {"prada", {280}},
+    {"santoni", {280}},
+    {"ugg", {260}},
 
     // Xiaomi MSM8953
-    {"daisy", 420},
-    {"oxygen", 342},
-    {"uter", 400},
-    {"sakura", 420},
-    {"vince", 440},
-    {"ysl", 280},
+    {"daisy", {420}},
+    {"oxygen", {342}},
+    {"uter", {400}},
+    {"sakura", {420}},
+    {"vince", {440}},
+    {"ysl", {280}},
 
         // clang-format on
 };
 
-std::unordered_map<std::string, std::string> kSocFamilyMap = {
+const std::unordered_map<std::string, std::string> kSocFamilyMap = {
         // clang-format off
     {"msm8916", "msm8916"},
     {"msm8917", "msm8937"},
@@ -110,53 +108,56 @@ std::vector<std::string> readDtCompatible(const std::string& filename) {
 
 int main() {
     bool ret = true;
-    std::string device_codename, device_soc, device_soc_family;
-    std::vector<std::string> compatibles = readDtCompatible(kDtCompatiblePath);
 
+    std::vector<std::string> compatibles = readDtCompatible(kDtCompatiblePath);
     if (compatibles.empty()) {
         std::cout << "Failed to read " << kDtCompatiblePath << std::endl;
-        return 1;
+        return EXIT_FAILURE;
     }
 
+    std::string device_codename, device_soc;
     for (const auto& compatible : compatibles) {
-        if (StartsWith(compatible, "wingtech,") ||
-            StartsWith(compatible, "xiaomi,")) {
+        if (StartsWith(compatible, "wingtech,") || StartsWith(compatible, "xiaomi,")) {
             if (!device_codename.empty()) continue;
             device_codename = compatible.substr(compatible.find_first_of(",") + 1);
             std::cout << "Device codename: " << device_codename << std::endl;
-            ret &= SetProperty(kPropCodename, device_codename);
+            ret &= SetProperty(kPropPrefix + "codename", device_codename);
         } else if (StartsWith(compatible, "qcom,")) {
             if (!device_soc.empty()) continue;
             device_soc = compatible.substr(5);
             std::cout << "SoC: " << device_soc << std::endl;
-            ret &= SetProperty(kPropSoc, device_soc);
+            ret &= SetProperty(kPropPrefix + "soc", device_soc);
         }
     }
 
-    for (const auto& [soc, soc_family] : kSocFamilyMap) {
-        if (device_soc == soc) {
-            device_soc_family = soc_family;
-            std::cout << "SoC Family: " << device_soc_family << std::endl;
-            ret &= SetProperty(kPropSocFamily, device_soc_family);
-            break;
-        }
+    if (device_codename.empty()) {
+        std::cout << "Failed to get device codename" << std::endl;
+        return EXIT_FAILURE;
     }
 
-    bool have_set_device_specific_properties = false;
-    for (int i = 0; i < ARRAY_SIZE(device_info_table); i++) {
-        if (device_codename == device_info_table[i].codename) {
-            ret &= SetProperty(kPropLcdDensity, std::to_string(device_info_table[i].lcd_density));
-            have_set_device_specific_properties = true;
-            break;
-        }
+    if (device_soc.empty()) {
+        std::cout << "Failed to get device SoC" << std::endl;
+        return EXIT_FAILURE;
     }
 
-    if (!have_set_device_specific_properties) {
-        ret &= SetProperty(kPropLcdDensity, "320");
+    const std::string* device_soc_family;
+    if (kSocFamilyMap.find(device_soc) != kSocFamilyMap.end()) {
+        device_soc_family = &kSocFamilyMap.at(device_soc);
+        std::cout << "SoC Family: " << *device_soc_family << std::endl;
+        ret &= SetProperty(kPropPrefix + "soc_family", *device_soc_family);
+    } else {
+        std::cout << "Failed to match SoC family" << std::endl;
+        return EXIT_FAILURE;
     }
 
-    return (!device_codename.empty() && !device_soc.empty() && !device_soc_family.empty() &&
-            ret == true)
-                   ? 0
-                   : 1;
+    const device_info_t* device_info_ptr;
+    if (kDeviceInfoMap.find(device_codename) != kDeviceInfoMap.end()) {
+        device_info_ptr = &kDeviceInfoMap.at(device_codename);
+    } else {
+        std::cout << "No matching device info, using fallback" << std::endl;
+        device_info_ptr = &kFallbackDeviceInfo;
+    }
+    ret &= SetProperty(kPropPrefix + "lcd_density", std::to_string(device_info_ptr->lcd_density));
+
+    return ret == true ? EXIT_SUCCESS : EXIT_FAILURE;
 }
