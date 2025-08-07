@@ -50,6 +50,24 @@
       "message": "This is quite bad, as it won\u0027t prevent wrong flashing.",
       "revId": "dbb5f71cdf4dc9707a0a64a9df39ae253803a76e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1249bd7b_45740691",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-08-07T11:06:27Z",
+      "side": 1,
+      "message": "Huh? All those devices are actually supported under a single target",
+      "parentUuid": "8b31a345_efeabca7",
+      "revId": "dbb5f71cdf4dc9707a0a64a9df39ae253803a76e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
