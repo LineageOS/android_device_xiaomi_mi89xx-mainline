@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
 
 $(foreach device,markw mido vince ysl rosy onclite,\
     $(foreach file,a506_zap.b00 a506_zap.b01 a506_zap.b02 a506_zap.mdt,\
-        $(eval _src := vendor/xiaomi/$(device)/proprietary/vendor/firmware/$(file))\
+        $(eval _src := vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/$(file))\
         $(eval _dst := $(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/$(device)/$(file))\
         $(eval $(if $(wildcard $(_src)),PRODUCT_COPY_FILES += $(_src):$(_dst),$(warning $(_src) not found)))))
 
