@@ -17,7 +17,8 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/init/init.mi89xx.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi89xx.rc
+    $(DEVICE_PATH)/init/init.mi89xx.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi89xx.rc \
+    $(DEVICE_PATH)/init/ueventd.mi89xx.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.mi89xx.rc
 
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false

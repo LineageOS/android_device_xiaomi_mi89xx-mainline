@@ -33,7 +33,8 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.mi89x7:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mi89x7 \
-    $(TARGET_DEVICE_PATH)/init/init.mi89x7.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi89x7.rc
+    $(TARGET_DEVICE_PATH)/init/init.mi89x7.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi89x7.rc \
+    $(TARGET_DEVICE_PATH)/init/ueventd.mi89x7.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.mi89x7.rc
 
 PRODUCT_PACKAGES += \
     zram.rc

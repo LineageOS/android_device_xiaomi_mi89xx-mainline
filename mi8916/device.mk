@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.mi8916:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mi8916 \
-    $(TARGET_DEVICE_PATH)/init/init.mi8916.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi8916.rc
+    $(TARGET_DEVICE_PATH)/init/init.mi8916.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi8916.rc \
+    $(TARGET_DEVICE_PATH)/init/ueventd.mi8916.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.mi8916.rc
 
 PRODUCT_PACKAGES += \
     use_memfd.rc \
