@@ -1,0 +1,18 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "symlink_firmware_mi8953_a_WCNSS_qcom_wlan_nv.bin",
+    vendor: true,
+    installed_location: "firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin",
+    symlink_target: "/mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin",
+}
+
+phony {
+    name: "all_symlink_firmware_mi8953_a",
+    required: [
+        "symlink_firmware_mi8953_a_WCNSS_qcom_wlan_nv.bin",
+    ],
+}
