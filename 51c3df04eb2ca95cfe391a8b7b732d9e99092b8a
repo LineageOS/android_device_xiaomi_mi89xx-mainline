@@ -51,6 +51,24 @@
       "parentUuid": "285f2efd_f951363d",
       "revId": "51c3df04eb2ca95cfe391a8b7b732d9e99092b8a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4511805d_85939ae7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-08-07T02:39:17Z",
+      "side": 1,
+      "message": "Only entries we can commonize is /vendor/firmware and /odm/firmware, all the other entries are non-standard, and rely on fstab, which is rightfully device-specific\n\nPolluting the list of firmware directories with non-existent ones will slow down boot.",
+      "parentUuid": "5dd81363_c5c2e7e7",
+      "revId": "51c3df04eb2ca95cfe391a8b7b732d9e99092b8a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
