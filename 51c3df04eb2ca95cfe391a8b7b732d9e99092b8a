@@ -86,6 +86,42 @@
       "message": "TODO: Missing changes for mi8916",
       "revId": "51c3df04eb2ca95cfe391a8b7b732d9e99092b8a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c630592_35316afb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-07T02:49:53Z",
+      "side": 1,
+      "message": "at least, there\u0027s like none of qcom devices can live without /vendor/firmware_mnt/image, it\u0027s a standard on qcom devices, I already have this path in sepolicy and mkdir in qcom-common",
+      "parentUuid": "4511805d_85939ae7",
+      "revId": "51c3df04eb2ca95cfe391a8b7b732d9e99092b8a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8daa51c5_83d61fb1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-07T02:49:53Z",
+      "side": 1,
+      "message": "in the early times I do know the existence of ueventd firmware_directories, and I tried it, but some drivers were really not loading firmwares from these directories and I was forced to rely on firmware_class path...\n\nhave you really tried this yet?",
+      "parentUuid": "8115988e_c45e6855",
+      "revId": "51c3df04eb2ca95cfe391a8b7b732d9e99092b8a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
