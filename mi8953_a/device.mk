@@ -28,7 +28,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Firmware
 PRODUCT_PACKAGES += \
-    all_symlink_firmware_mi8953_a \
     all_symlink_firmware_mi89x7
 
 $(foreach device,markw mido vince ysl rosy onclite,\
@@ -40,7 +39,8 @@ $(foreach device,markw mido vince ysl rosy onclite,\
 # Init
 PRODUCT_COPY_FILES += \
     $(TARGET_DEVICE_PATH)/fstab/fstab.mi8953_a:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mi8953_a \
-    $(TARGET_DEVICE_PATH)/init/init.mi8953_a.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi8953_a.rc
+    $(TARGET_DEVICE_PATH)/init/init.mi8953_a.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mi8953_a.rc \
+    $(TARGET_DEVICE_PATH)/init/ueventd.mi8953_a.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.mi8953_a.rc
 
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 PRODUCT_PACKAGES += \
