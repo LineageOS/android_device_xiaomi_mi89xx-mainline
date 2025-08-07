@@ -1,5 +1,6 @@
 <audiohal>
     <codec_probe file="/proc/asound/card0/id">
+        <case name="xiaomidaisy" file="audio.xiaomi-daisy.xml" />
         <case name="xiaomimarkw" file="audio.xiaomi-mido.xml" />
         <case name="xiaomimido" file="audio.xiaomi-mido.xml" />
         <case name="xiaomionclite" file="audio.xiaomi-onclite.xml" />
