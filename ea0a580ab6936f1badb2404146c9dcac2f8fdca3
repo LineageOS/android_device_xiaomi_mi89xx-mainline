@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b452486_5aece489",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-07T16:32:10Z",
+      "side": 1,
+      "message": "I\u0027ve added `firmware_directories` same as you did, and:\n```\n[   38.768966] qcom-venus 1d00000.venus: Direct firmware load for venus.mdt failed with error -2\n\n[   38.771736] qcom-venus 1d00000.venus: fail to load video firmware\n\n[   39.359134] remoteproc remoteproc1: Direct firmware load for adsp.mdt failed with error -2\n\n[   39.366896] remoteproc remoteproc1: Direct firmware load for adsp.mdt failed with error -2\n\n[   39.390444] remoteproc remoteproc1: request_firmware failed: -2\n\n[   39.406301] remoteproc remoteproc2: Direct firmware load for wcnss.mdt failed with error -2\n\n[   39.421801] remoteproc remoteproc2: Direct firmware load for wcnss.mdt failed with error -2\n\n[   39.444897] remoteproc remoteproc2: request_firmware failed: -2\n\nmi8953_a:/ # dmesg|grep a506\n\n[   20.998790] adreno 1c00000.gpu: [drm:adreno_zap_shader_load [msm]] *ERROR* Unable to load qcom/msm8953/xiaomi/vince/a506_zap.mdt\n\n```",
+      "revId": "ea0a580ab6936f1badb2404146c9dcac2f8fdca3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
