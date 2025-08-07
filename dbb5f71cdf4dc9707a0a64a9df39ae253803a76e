@@ -33,6 +33,23 @@
       "message": "sakura is also missing btw",
       "revId": "dbb5f71cdf4dc9707a0a64a9df39ae253803a76e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b31a345_efeabca7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-08-07T08:05:44Z",
+      "side": 1,
+      "message": "This is quite bad, as it won\u0027t prevent wrong flashing.",
+      "revId": "dbb5f71cdf4dc9707a0a64a9df39ae253803a76e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
