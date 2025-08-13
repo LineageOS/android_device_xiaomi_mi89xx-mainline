@@ -104,6 +104,24 @@
       "parentUuid": "af70a40e_fef8484a",
       "revId": "c6a04b97940a3dd37b9ef11ae6b9bd2e6142d496",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e23be3c9_13d2306a",
+        "filename": "mi8953_a/device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-08-13T15:28:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06dea4cf_12609529",
+      "revId": "c6a04b97940a3dd37b9ef11ae6b9bd2e6142d496",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
