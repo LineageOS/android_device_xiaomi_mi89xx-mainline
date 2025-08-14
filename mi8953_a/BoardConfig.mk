@@ -56,14 +56,20 @@ RECOVERY_KERNEL_MODULES := \
 SYSTEM_KERNEL_MODULES := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.include.system))
 else
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.system_dlkm))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.vendor))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.system_dlkm)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.vendor_dlkm))
-BOARD_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.recovery))
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.recovery))
 BOOT_KERNEL_MODULES := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.system_dlkm)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.vendor_dlkm))
-RECOVERY_KERNEL_MODULES := $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.recovery))
+RECOVERY_KERNEL_MODULES := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.recovery))
+SYSTEM_KERNEL_MODULES := \
+    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.include.system_dlkm))
 
 # Some kernel modules return an error at modprobe time
 # TODO: Move non-critical modules to vendor
