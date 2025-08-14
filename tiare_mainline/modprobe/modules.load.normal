@@ -1,0 +1,61 @@
+# Bluetooth
+btqcomsmd
+
+# LED
+leds-qcom-flash-v1
+
+# Media
+venus_dec
+venus_enc
+
+# Remote controller
+gpio-ir-tx
+ir-spi
+pwm-ir-tx
+
+# Remoteproc
+qcom_q6v5_mss
+qcom_q6v5_pas
+qcom_wcnss_pil
+
+# SoC
+qcom_bam_dmux
+qcom_memshare
+qcom_pd_mapper
+qcom_sns_reg
+
+# Sound
+snd-soc-apq8016-sbc
+snd-soc-msm8916-analog
+snd-soc-msm8916-digital
+snd-soc-simple-amplifier
+
+# Sound (DSP)
+# `ls sound/soc/qcom/qdsp6/*.ko|sort`
+q6adm
+q6afe-clocks
+q6afe-dai
+q6afe
+q6apm-dai
+q6apm-lpass-dais
+q6asm-dai
+q6asm
+q6core
+q6cvp
+q6cvs
+q6mvm
+q6prm-clocks
+q6prm
+q6routing
+q6voice-common
+q6voice-dai
+q6voice
+snd-q6apm
+snd-q6dsp-common
+
+# Vibrator
+qcom-spmi-haptics
+gpio-vibra
+
+# Wi-Fi
+wcn36xx

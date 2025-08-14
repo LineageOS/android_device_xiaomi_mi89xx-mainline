@@ -1,0 +1,56 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+TARGET_DEVICE_PATH := device/xiaomi/mi89xx-mainline/tiare_mainline
+
+# Inherit options from mainline/qcom-common
+TARGET_QCOM_SOC_FAMILY := msm8937
+## TODO: Bringup the corresponding hardware and remove the following definitions
+TARGET_SUPPORTS_SUSPEND := false
+include device/mainline/qcom-common/optional/options.mk
+
+# Inherit from parent
+$(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
+
+# Audio
+PRODUCT_PACKAGES += \
+    audio.tiare_mainline.xml
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
+# Dalvik heap
+$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+
+# Firmware
+PRODUCT_PACKAGES += \
+    all_symlink_firmware_tiare
+
+# Init
+PRODUCT_PACKAGES += \
+    fstab.tiare \
+    fstab.tiare.ramdisk \
+    init.tiare.rc \
+    ueventd.tiare.rc
+
+PRODUCT_PACKAGES += \
+    zram.rc
+
+# Input
+PRODUCT_PACKAGES += \
+    Goodix_Capacitive_TouchScreen.kl
+
+# Kernel
+PRODUCT_PACKAGES += \
+    modules.load.normal
+
+PRODUCT_PACKAGES += \
+    AodDefaultOnOverlay
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(TARGET_DEVICE_PATH) \
+    kernel/mainline/configs
