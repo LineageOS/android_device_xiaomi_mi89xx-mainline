@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ab8e6971_a26f68f2",
+        "filename": "mi8953_a/init/init.mi8953_a.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-14T06:31:05Z",
+      "side": 1,
+      "message": "you\u0027re using the same file for `BOARD_VENDOR_KERNEL_MODULES_LOAD`, which is already loaded by:\nhttps://github.com/LineageOS/android_device_mainline_common/blob/lineage-22.2/init/init.mainline.rc#L9\n\nthe reason of having this while dlkm_loader configuration exists is, this is supposed to load firmware after some initialization has been done (firmware mount/generation), and only in normal boot mode (i.e. not charger mode)",
+      "revId": "4a372c5707c2e542aa1d598dbe206f13fd9066f2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
