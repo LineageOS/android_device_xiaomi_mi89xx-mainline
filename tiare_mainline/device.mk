@@ -6,7 +6,7 @@
 TARGET_DEVICE_PATH := device/xiaomi/mi89xx-mainline/tiare_mainline
 
 # Inherit options from mainline/qcom-common
-TARGET_QCOM_SOC_FAMILY := msm8937
+TARGET_QCOM_SOC := msm8917
 ## TODO: Bringup the corresponding hardware and remove the following definitions
 TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
@@ -24,6 +24,11 @@ TARGET_SCREEN_WIDTH := 720
 
 # Dalvik heap
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+
+# Dynamic Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 # Firmware
 PRODUCT_PACKAGES += \
