@@ -55,6 +55,9 @@ endif
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 PRODUCT_PACKAGES += \
     modules.load.normal
+else
+PRODUCT_PACKAGES += \
+    modules.load.vendor
 endif
 
 # Overlay
