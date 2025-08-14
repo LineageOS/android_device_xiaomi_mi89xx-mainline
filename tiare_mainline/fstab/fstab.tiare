@@ -7,8 +7,8 @@
 /dev/block/by-name/boot /boot emmc defaults defaults
 
 # Cache
-/dev/block/by-name/cache /cache ext4 nodev,noatime,nosuid,discard check,formattable
-/dev/block/by-name/cache /cache f2fs nodev,noatime,nosuid,discard check,formattable
+/dev/block/by-name/logdump /cache ext4 nodev,noatime,nosuid,discard check,formattable
+/dev/block/by-name/logdump /cache f2fs nodev,noatime,nosuid,discard check,formattable
 
 # Firmware
 /dev/block/by-name/modem /vendor/firmware_mnt vfat ro,context=u:object_r:firmware_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337 defaults
@@ -26,7 +26,7 @@
 /devices/platform/soc@0/7864900.mmc/mmc_host/mmc* auto auto defaults voldmanaged=sdcard:auto,encryptable=userdata,noemulatedsd
 
 # System
-/dev/block/by-name/system /system ext4 noatime,ro first_stage_mount
+system /system erofs ro first_stage_mount,logical
 
 # USB
 /devices/platform/soc@0/78db000.usb/*/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
@@ -36,7 +36,8 @@
 /dev/block/by-name/userdata /data f2fs nodev,noatime,nosuid,discard,reserve_root=32768 latemount,check,quota,formattable
 
 # Vendor
-/dev/block/by-name/cust /vendor ext4 noatime,ro first_stage_mount
+vendor /vendor ext4 noatime,ro first_stage_mount,logical
+vendor /vendor erofs ro first_stage_mount,logical
 
 # ZRAM
 /dev/block/zram0 none swap defaults zramsize=50%
