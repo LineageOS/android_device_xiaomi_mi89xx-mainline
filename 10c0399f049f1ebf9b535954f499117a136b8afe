@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0bf8955_b4911b53",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-14T18:32:19Z",
+      "side": 1,
+      "message": "with change 442697 most of the firmwares can get loaded\n\nbut please keep the `/odm/firmware/qcom/msm8953/xiaomi` symlink until your https://github.com/SebaUbuntu/android_kernel_xiaomi_msm8953/commit/1f8f4fcf6fff0e3a57e3d949f61487859a48b7de is upstreamed\n\nafter that I\u0027ll remove -2",
+      "revId": "10c0399f049f1ebf9b535954f499117a136b8afe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
