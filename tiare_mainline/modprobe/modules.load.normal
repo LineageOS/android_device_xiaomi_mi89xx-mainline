@@ -1,17 +1,9 @@
 # Bluetooth
 btqcomsmd
 
-# LED
-leds-qcom-flash-v1
-
 # Media
 venus_dec
 venus_enc
-
-# Remote controller
-gpio-ir-tx
-ir-spi
-pwm-ir-tx
 
 # Remoteproc
 qcom_q6v5_mss
@@ -26,9 +18,9 @@ qcom_sns_reg
 
 # Sound
 snd-soc-apq8016-sbc
+snd-soc-aw8738
 snd-soc-msm8916-analog
 snd-soc-msm8916-digital
-snd-soc-simple-amplifier
 
 # Sound (DSP)
 # `ls sound/soc/qcom/qdsp6/*.ko|sort`
@@ -54,7 +46,6 @@ snd-q6apm
 snd-q6dsp-common
 
 # Vibrator
-qcom-spmi-haptics
 gpio-vibra
 
 # Wi-Fi
