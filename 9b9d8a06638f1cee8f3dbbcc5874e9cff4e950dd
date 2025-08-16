@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a94c4251_7c2c226b",
+        "filename": "mi8916/device.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2025-08-16T17:46:19Z",
+      "side": 1,
+      "message": "inconsistent",
+      "revId": "9b9d8a06638f1cee8f3dbbcc5874e9cff4e950dd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
