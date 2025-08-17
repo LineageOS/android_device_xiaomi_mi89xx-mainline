@@ -16,6 +16,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "audio.xiaomi-santoni.xml",
+    src: "audio.xiaomi-santoni.xml",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "audio.xiaomi-ugg.xml",
     src: "audio.xiaomi-ugg.xml",
     vendor: true,

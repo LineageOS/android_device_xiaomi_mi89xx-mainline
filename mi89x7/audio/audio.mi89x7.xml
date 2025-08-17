@@ -1,6 +1,7 @@
 <audiohal>
     <codec_probe file="/proc/asound/card0/id">
         <case name="xiaomiriva" file="audio.xiaomi-riva.xml" />
+        <case name="xiaomisantoni" file="audio.xiaomi-santoni.xml" />
         <case name="xiaomiugg" file="audio.xiaomi-ugg.xml" />
     </codec_probe>
     <mixer card="0">
