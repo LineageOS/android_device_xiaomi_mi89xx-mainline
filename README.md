@@ -26,11 +26,6 @@
 - The target may boot only on Redmi 2 (`wt88047`) as of now.
 - The target uses SD card for `/data` mountpoint. Make sure to have a SD card with 2 GB size at minimum inserted.
 
-## Notes for `mi89x7` target
-
-- The target uses tinyhal audio HAL by default, however not all devices has tinyhal configuration file yet. To boot on the unsupported devices, run `export TARGET_AUDIO_HAL=default-aidl`.
-- The target uses Swiftshader graphics by default, due to the fact that Mesa does not work properly on devices with Adreno 505 GPU. To get smoother graphics experience on devices with Adreno 306 GPU, run `export TARGET_GRAPHICS=mesa`.
-
 ## Notes for `tiare_mainline` target
 
 - The device has `recovery` partition sized at 25 MB which is too small to hold `recovery.img` built from the target. To boot the `recovery.img`, flash the image to `boot` partition and continue with normal boot.
