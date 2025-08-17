@@ -2,11 +2,11 @@
 
 ## Kernel repositories
 
-|  Target  |              Path             |                    URL                    | Branch |
-|----------|-------------------------------|-------------------------------------------|--------|
-| mi8916   | kernel/xiaomi/mi8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/v6.16-rc4 |
-| mi8953_a | kernel/xiaomi/mi8953-mainline | https://github.com/msm8953-mainline/linux | 6.15/main |
-| mi89x7   | kernel/xiaomi/mi89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.15 |
+|         Target         |              Path             |                    URL                    |         Branch        |
+|------------------------|-------------------------------|-------------------------------------------|-----------------------|
+| mi8916                 | kernel/xiaomi/mi8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/v6.16-rc4 |
+| mi8953_a               | kernel/xiaomi/mi8953-mainline | https://github.com/msm8953-mainline/linux | 6.15/main             |
+| mi89x7, tiare_mainline | kernel/xiaomi/mi89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.15          |
 
 ## Kernel patches
 
@@ -30,3 +30,10 @@
 
 - The target uses tinyhal audio HAL by default, however not all devices has tinyhal configuration file yet. To boot on the unsupported devices, run `export TARGET_AUDIO_HAL=default-aidl`.
 - The target uses Swiftshader graphics by default, due to the fact that Mesa does not work properly on devices with Adreno 505 GPU. To get smoother graphics experience on devices with Adreno 306 GPU, run `export TARGET_GRAPHICS=mesa`.
+
+## Notes for `tiare_mainline` target
+
+- The device has `recovery` partition sized at 25 MB which is too small to hold `recovery.img` built from the target. To boot the `recovery.img`, flash the image to `boot` partition and continue with normal boot.
+- The target is 32-bit, which requires the following changes to be made in AOSP tree in order to boot:
+  1. On `packages/modules/Connectivity/bpf/loader/NetBpfLoad.cpp`, locate to the next line of the line containing `[Arm] 64-bit userspace required on 6.2+ kernels (%d).` (which should be `return 1;`), remove the line.
+  2. On `system/netd/server/XfrmController.cpp`, in function `validateResponse`, replace the `return` statement containing `Error netlink message` with `return netdutils::status::ok;`.
