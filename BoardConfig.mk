@@ -25,7 +25,7 @@ BOARD_KERNEL_CMDLINE := \
     $(MAINLINE_QCOM_SOC_ANDROIDBOOT_PARAMS) \
     androidboot.verifiedbootstate=orange \
     console=tty0 \
-    lk2nd.pass-ramoops=zap
+    lk2nd.pass-ramoops
 
 BOARD_KERNEL_CMDLINE += \
     androidboot.selinux=permissive \
