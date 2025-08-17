@@ -18,6 +18,7 @@ $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 # Audio
 PRODUCT_PACKAGES += \
     audio.mi89x7.xml \
+    audio.xiaomi-riva.xml \
     audio.xiaomi-ugg.xml
 
 # Boot animation
