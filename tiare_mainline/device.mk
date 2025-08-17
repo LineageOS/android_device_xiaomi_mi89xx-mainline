@@ -12,6 +12,7 @@ TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
 # Inherit from parent
+PRODUCT_GO_DEFAULTS_SUFFIX := _512
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
 # Audio
