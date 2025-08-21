@@ -8,3 +8,9 @@ prebuilt_usr_keylayout {
     src: "Goodix_Capacitive_TouchScreen.kl",
     device_specific: true,
 }
+
+prebuilt_usr_keylayout {
+    name: "ts_vkeys.kl",
+    src: "ts_vkeys.kl",
+    device_specific: true,
+}

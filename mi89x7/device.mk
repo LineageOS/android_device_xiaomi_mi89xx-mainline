@@ -45,7 +45,10 @@ PRODUCT_PACKAGES += \
 
 # Input
 PRODUCT_PACKAGES += \
-    Goodix_Capacitive_TouchScreen.kl
+    Goodix_Capacitive_TouchScreen.kl \
+    ts_vkeys.kl
+
+TARGET_TOUCHSCREEN_HAS_VIRTUAL_KEYS := true
 
 # Kernel
 PRODUCT_PACKAGES += \
