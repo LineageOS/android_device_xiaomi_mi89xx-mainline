@@ -7,6 +7,11 @@
     "repository": "android_external_lk2nd",
     "target_path": "external/lk2nd"
   },
+  {
+    "repository": "android_hardware_intel_sensors-iio",
+    "target_path": "hardware/intel/sensors-iio",
+    "branch": "lineage-22.2"
+  },
   { 
     "repository": "android_kernel_mainline_configs",
     "target_path": "kernel/mainline/configs"
