@@ -39,6 +39,8 @@ PRODUCT_PACKAGES += \
     use_memfd.rc \
     zram.rc
 
+$(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
+
 # Input
 PRODUCT_PACKAGES += \
     ts_vkeys.kl

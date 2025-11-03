@@ -53,6 +53,8 @@ PRODUCT_PACKAGES += \
     zram.rc
 endif
 
+$(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
+
 # Kernel
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 PRODUCT_PACKAGES += \
