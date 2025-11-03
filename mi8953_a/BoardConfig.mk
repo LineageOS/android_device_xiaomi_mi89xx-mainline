@@ -54,8 +54,6 @@ RECOVERY_KERNEL_MODULES := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.include_dep.basic)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.include_dep.drm)) \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
-SYSTEM_KERNEL_MODULES := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/mainline/modules.include.system))
 else
 BOARD_SYSTEM_KERNEL_MODULES_LOAD := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/gki/modules.load.system_dlkm))
