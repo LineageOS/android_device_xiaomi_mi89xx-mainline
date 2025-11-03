@@ -1,6 +1,8 @@
+drm.ko
 drm_client_lib.ko
 drm_display_helper.ko
 drm_exec.ko
 drm_kms_helper.ko
+drm_panel_orientation_quirks.ko
 gpu-sched.ko
 mdt_loader.ko
