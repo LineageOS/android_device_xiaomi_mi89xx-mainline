@@ -22,6 +22,7 @@
 | `Revert "usb: dwc3: gadget: Remove dwc3_request->needs_extra_trb"` | Fixes USB Gadget data transfer on 6.13+ on msm8953 | `git revert f5313c8b418c2efb9c0581d8066c5ae8c60c47de` |
 | `Revert "usb: dwc3: gadget: Cleanup SG handling"` | Fixes USB Gadget data transfer on 6.13+ on msm8953 | `git revert 61440628a4ffe0639c4f69a6ffa46c3a0bead3d5` |
 | `Revert "drm/msm/dpu: move scaling limitations out of the hw_catalog"` | Fixes tearing display on 6.13+ | [Patch](.kernel-patches/0001-Revert-drm-msm-dpu-move-scaling-limitations-out-of-t.patch) |
+| `drm/msm: Prevent early unmap of shared objects` | Fixes 3D graphics corruption on 6.17+ | https://github.com/msm8953-mainline/linux/commit/becee6461b98a0b78b302e4e5fd6ad40acba9295.patch |
 
 ## Notes for `mi8916` target
 
