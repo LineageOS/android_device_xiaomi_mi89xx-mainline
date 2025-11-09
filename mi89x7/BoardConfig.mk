@@ -23,14 +23,14 @@ TARGET_DTB_LIST_WILDCARD := \
 
 TARGET_KERNEL_CONFIG_EXT := \
     $(TARGET_DEVICE_PATH)/kconfigs/config-postmarketos-qcom-msm89x7.aarch64 \
+    kernel/mainline/configs/fragments/android-base-pre/common.config \
     kernel/mainline/configs/fragments/android-base-pre/arm64.config \
     kernel/configs/b/android-6.12/android-base.config \
     kernel/mainline/configs/fragments/android-base-conditional/CONFIG_ARM64-y.config \
     kernel/mainline/configs/fragments/common.config \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
-    kernel/mainline/configs/fragments/n/faster-build-time.config \
-    $(TARGET_DEVICE_PATH)/kconfigs/builtin-fixup.config
+    kernel/mainline/configs/fragments/n/faster-build-time.config
 
 # Kernel modules
 BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \

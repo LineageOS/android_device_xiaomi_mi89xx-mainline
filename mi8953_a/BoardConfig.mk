@@ -26,6 +26,7 @@ TARGET_DTB_LIST_WILDCARD := \
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 TARGET_KERNEL_CONFIG_EXT := \
     $(TARGET_DEVICE_PATH)/kconfigs/config-postmarketos-qcom-msm8953.aarch64 \
+    kernel/mainline/configs/fragments/android-base-pre/common.config \
     kernel/mainline/configs/fragments/android-base-pre/arm64.config \
     kernel/configs/b/android-6.12/android-base.config \
     kernel/mainline/configs/fragments/android-base-conditional/CONFIG_ARM64-y.config \
@@ -33,7 +34,6 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config \
-    $(TARGET_DEVICE_PATH)/kconfigs/builtin-fixup.config \
     $(TARGET_DEVICE_PATH)/kconfigs/fixups.config
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-mainline
 else

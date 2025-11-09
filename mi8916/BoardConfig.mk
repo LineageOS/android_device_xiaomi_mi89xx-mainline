@@ -23,6 +23,7 @@ TARGET_KERNEL_CONFIG := \
     msm8916_defconfig
 
 TARGET_KERNEL_CONFIG_EXT := \
+    kernel/mainline/configs/fragments/android-base-pre/common.config \
     kernel/mainline/configs/fragments/android-base-pre/arm64.config \
     kernel/configs/b/android-6.12/android-base.config \
     kernel/mainline/configs/fragments/android-base-conditional/CONFIG_ARM64-y.config \
@@ -30,7 +31,6 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/y/fbcon.config \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config \
-    $(TARGET_DEVICE_PATH)/kconfigs/builtin-fixup.config \
     $(TARGET_DEVICE_PATH)/kconfigs/fixups.config
 
 # Kernel modules
