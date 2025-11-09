@@ -21,7 +21,7 @@
 | `Revert "usb: dwc3: remove unused sg struct member"` | Fixes USB Gadget data transfer on 6.13+ on msm8953 | `git revert 686d4a2c26b49eaf6e817f16b7cb6c4b961aa7a7` |
 | `Revert "usb: dwc3: gadget: Remove dwc3_request->needs_extra_trb"` | Fixes USB Gadget data transfer on 6.13+ on msm8953 | `git revert f5313c8b418c2efb9c0581d8066c5ae8c60c47de` |
 | `Revert "usb: dwc3: gadget: Cleanup SG handling"` | Fixes USB Gadget data transfer on 6.13+ on msm8953 | `git revert 61440628a4ffe0639c4f69a6ffa46c3a0bead3d5` |
-| `Revert "drm/msm/dpu: move scaling limitations out of the hw_catalog"` | Fixes tearing display on 6.13+ | `git revert 8f15005783b8a77012a0b1da84c45611ea560a2e` with many fixups |
+| `Revert "drm/msm/dpu: move scaling limitations out of the hw_catalog"` | Fixes tearing display on 6.13+ | [Patch](.kernel-patches/0001-Revert-drm-msm-dpu-move-scaling-limitations-out-of-t.patch) |
 
 ## Notes for `mi8916` target
 
