@@ -14,8 +14,8 @@
 |-------------|---------|--------|
 | `ANDROID: usb: gadget: configfs: Add Uevent to notify userspace` | Fixes USB in normal mode | https://android.googlesource.com/kernel/common-patches/+/refs/heads/main-kernel/android-mainline/ANDROID-usb-gadget-configfs-Add-Uevent-to-notify-userspace.patch |
 | `Revert "staging: remove ashmem"` | Fixes media codec | https://android.googlesource.com/kernel/common-patches/+/refs/heads/main-kernel/android-mainline/Revert-staging-remove-ashmem.patch |
-| `Revert "dm: fix copying after src array boundaries"` | Fixes kernel crash during APEX mount on 6.15+ | `git revert f1aff4bc199cb92c055668caed65505e3b4d2656` |
-| `Revert "dm: always update the array size in realloc_argv on success"` | Fixes kernel crash during APEX mount on 6.15+ | `git revert 5a2a6c428190f945c5cbf5791f72dbea83e97f66` |
+| `Revert "dm: fix copying after src array boundaries"` | Fixes kernel crash during APEX mount on 6.15 | `git revert f1aff4bc199cb92c055668caed65505e3b4d2656` |
+| `Revert "dm: always update the array size in realloc_argv on success"` | Fixes kernel crash during APEX mount on 6.15 | `git revert 5a2a6c428190f945c5cbf5791f72dbea83e97f66` |
 | `Revert "remoteproc: qcom_wcnss: Fix on platforms without fallback regulators"` | Fixes qcom-wcnss-pil probe error on 6.15+ | `git revert 4ca45af0a56d00b86285d6fdd720dca3215059a7` |
 | `Revert "remoteproc: qcom_wcnss: Handle platforms with only single power domain"` | Fixes qcom-wcnss-pil probe error on 6.15+ | `git revert 65991ea8a6d1e68effdc01d95ebe39f1653f7b71` |
 | `Revert "usb: dwc3: remove unused sg struct member"` | Fixes USB Gadget data transfer on 6.13~6.16 on msm8953 | `git revert 686d4a2c26b49eaf6e817f16b7cb6c4b961aa7a7` |
