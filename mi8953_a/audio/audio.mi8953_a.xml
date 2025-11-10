@@ -5,6 +5,7 @@
         <case name="xiaomimido" file="audio.xiaomi-mido.xml" />
         <case name="xiaomionclite" file="audio.xiaomi-onclite.xml" />
         <case name="xiaomirosy" file="audio.xiaomi-vince.xml" />
+        <case name="xiaomiuter" file="audio.xiaomi-uter.xml" />
         <case name="xiaomivince" file="audio.xiaomi-vince.xml" />
         <case name="xiaomiysl" file="audio.xiaomi-mido.xml" />
     </codec_probe>
