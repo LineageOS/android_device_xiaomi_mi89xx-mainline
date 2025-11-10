@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     audio.xiaomi-daisy.xml \
     audio.xiaomi-mido.xml \
     audio.xiaomi-onclite.xml \
+    audio.xiaomi-uter.xml \
     audio.xiaomi-vince.xml
 
 # Boot animation
