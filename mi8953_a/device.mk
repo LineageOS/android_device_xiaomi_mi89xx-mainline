@@ -35,7 +35,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     all_symlink_firmware_mi8953_a
 
-$(foreach device,daisy markw mido vince ysl rosy onclite,\
+$(foreach device,daisy markw mido vince ysl rosy onclite uter,\
     $(foreach file,a506_zap.b00 a506_zap.b01 a506_zap.b02 a506_zap.mdt,\
         $(eval _src := vendor/xiaomi/$(device)/proprietary/vendor/firmware/$(file))\
         $(eval _dst := $(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/$(device)/$(file))\
