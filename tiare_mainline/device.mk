@@ -12,7 +12,6 @@ TARGET_SUPPORTS_SUSPEND := false
 include device/mainline/qcom-common/optional/options.mk
 
 # Inherit from parent
-PRODUCT_GO_DEFAULTS_SUFFIX := _512
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
 # Audio
@@ -33,6 +32,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Firmware
 PRODUCT_PACKAGES += \
     all_symlink_firmware_tiare
+
+# Go
+PRODUCT_GO_DEFAULTS_SUFFIX := _512
 
 # Init
 PRODUCT_PACKAGES += \
