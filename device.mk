@@ -8,6 +8,11 @@ DEVICE_PATH := device/xiaomi/mi89xx-mainline
 # Inherit from mainline/qcom-common
 $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)
 
+# AAPT
+ifeq ($(PRODUCT_IS_ATV),true)
+PRODUCT_AAPT_PREF_CONFIG := tvdpi
+endif
+
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
 
