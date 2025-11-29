@@ -15,6 +15,9 @@ include device/mainline/qcom-common/optional/options.mk
 # Inherit from parent
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
+# AAPT
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.mi89x7.xml \
