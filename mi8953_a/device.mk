@@ -16,6 +16,11 @@ include device/mainline/qcom-common/optional/options.mk
 # Inherit from parent
 $(call inherit-product, device/xiaomi/mi89xx-mainline/device.mk)
 
+# AAPT
+ifneq ($(PRODUCT_IS_ATV),true)
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+endif
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.mi8953_a.xml \
