@@ -47,9 +47,19 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlays/overlay
 
+ifeq ($(PRODUCT_IS_ATV),true)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlays/overlay-tv
+endif
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+
+ifeq ($(PRODUCT_IS_ATV),true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.screen.landscape.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.screen.landscape.xml
+endif
 
 # Set device properties
 PRODUCT_PACKAGES += \
