@@ -21,6 +21,9 @@ PRODUCT_PACKAGES += \
     init.recovery.mi89xx.rc \
     ueventd.mi89xx.rc
 
+PRODUCT_PACKAGES += \
+    zram.rc
+
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 

@@ -40,9 +40,6 @@ PRODUCT_PACKAGES += \
     init.mi89x7.rc \
     ueventd.mi89x7.rc
 
-PRODUCT_PACKAGES += \
-    zram.rc
-
 $(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
 
 # Input

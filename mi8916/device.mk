@@ -38,9 +38,6 @@ PRODUCT_PACKAGES += \
     init.recovery.mi8916.rc \
     ueventd.mi8916.rc
 
-PRODUCT_PACKAGES += \
-    zram.rc
-
 $(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
 
 # Input

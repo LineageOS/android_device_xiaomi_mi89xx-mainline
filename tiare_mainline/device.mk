@@ -43,9 +43,6 @@ PRODUCT_PACKAGES += \
     init.tiare.rc \
     ueventd.tiare.rc
 
-PRODUCT_PACKAGES += \
-    zram.rc
-
 # Input
 PRODUCT_PACKAGES += \
     Goodix_Capacitive_TouchScreen.kl \
