@@ -51,6 +51,11 @@ PRODUCT_PACKAGES += \
     init.mi8953_a.rc \
     ueventd.mi8953_a.rc
 
+ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
+PRODUCT_PACKAGES += \
+    use_memfd.rc
+endif
+
 $(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
 
 # Kernel
