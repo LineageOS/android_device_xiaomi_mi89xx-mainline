@@ -18,7 +18,7 @@ BOARD_EROFS_PCLUSTER_SIZE := 262144
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi89x7-mainline
+TARGET_KERNEL_SOURCE := kernel/mainline/msm89x7-mainline
 
 TARGET_DTB_LIST_WILDCARD := \
     qcom/msm8917-xiaomi-tiare

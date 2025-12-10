@@ -14,7 +14,7 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=mi8916
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8916-mainline
+TARGET_KERNEL_SOURCE := kernel/mainline/msm8916-mainline
 
 TARGET_DTB_LIST_WILDCARD := \
     qcom/msm8916-wingtech-wt88047

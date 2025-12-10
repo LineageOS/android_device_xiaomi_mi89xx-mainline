@@ -35,7 +35,7 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/n/disable-clang-hardening-features.config \
     kernel/mainline/configs/fragments/n/faster-build-time.config \
     $(TARGET_DEVICE_PATH)/kconfigs/fixups.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mi8953-mainline
+TARGET_KERNEL_SOURCE := kernel/mainline/msm8953-mainline
 else
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \

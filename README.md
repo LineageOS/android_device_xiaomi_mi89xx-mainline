@@ -2,11 +2,11 @@
 
 ## Kernel repositories
 
-|         Target         |              Path             |                    URL                    |         Branch         |
-|------------------------|-------------------------------|-------------------------------------------|------------------------|
-| mi8916                 | kernel/xiaomi/mi8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/v6.18-rc4  |
-| mi8953_a               | kernel/xiaomi/mi8953-mainline | https://github.com/msm8953-mainline/linux | 6.17.7/main            |
-| mi89x7, tiare_mainline | kernel/xiaomi/mi89x7-mainline | https://github.com/msm89x7-mainline/linux | barni2000/6.17-develop |
+|         Target         |               Path               |                    URL                    |         Branch         |
+|------------------------|----------------------------------|-------------------------------------------|------------------------|
+| mi8916                 | kernel/mainline/msm8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/v6.18-rc4  |
+| mi8953_a               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | 6.17.7/main            |
+| mi89x7, tiare_mainline | kernel/mainline/msm89x7-mainline | https://github.com/msm89x7-mainline/linux | barni2000/6.17-develop |
 
 ## Kernel patches
 
