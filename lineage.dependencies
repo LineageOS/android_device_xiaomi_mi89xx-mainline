@@ -9,8 +9,7 @@
   },
   {
     "repository": "android_hardware_intel_sensors-iio",
-    "target_path": "hardware/intel/sensors-iio",
-    "branch": "lineage-22.2"
+    "target_path": "hardware/intel/sensors-iio"
   },
   { 
     "repository": "android_kernel_mainline_configs",
