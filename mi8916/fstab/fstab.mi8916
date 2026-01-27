@@ -11,7 +11,7 @@
 /dev/block/by-name/cache /cache f2fs nodev,noatime,nosuid,discard check,formattable
 
 # Firmware
-/dev/block/by-name/modem /vendor/firmware_mnt vfat ro,context=u:object_r:firmware_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337 defaults
+/dev/block/by-name/modem /vendor/firmware_mnt vfat ro,context=u:object_r:firmware_mnt_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337 defaults
 
 # Metadata
 /dev/block/by-name/oem /metadata ext4 nodev,noatime,nosuid,discard,data=journal,commit=1 check,formattable,first_stage_mount,metadata_csum
