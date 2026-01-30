@@ -10,6 +10,7 @@ $(call inherit-product, packages/services/Car/car_product/build/car.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, device/lineage/car/lineage_car_vendor.mk)
+$(call inherit-product, device/lineage/car/lineage_phone_car.mk)
 $(call inherit-product, vendor/lineage/config/common_car.mk)
 
 # Inherit from device
