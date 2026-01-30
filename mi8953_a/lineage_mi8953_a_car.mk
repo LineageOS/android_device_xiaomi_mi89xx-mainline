@@ -5,8 +5,6 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, packages/services/Car/car_product/build/car.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, device/lineage/car/lineage_car_vendor.mk)
