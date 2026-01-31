@@ -34,6 +34,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.screen.landscape.xml:system/etc/permissions/android.hardware.screen.landscape.xml
 endif
 
+# Set device properties
+$(call soong_config_set_bool,xiaomi_mi89xx_mainline_set_device_prop,divide_lcd_density_by_two,true)
+
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
 
 PRODUCT_NAME := lineage_mi8953_a_car

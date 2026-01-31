@@ -115,7 +115,12 @@ int main() {
         std::cout << "No matching device info, using fallback" << std::endl;
         device_info_ptr = &kFallbackDeviceInfo;
     }
-    ret &= SetProperty(kPropPrefix + "lcd_density", std::to_string(device_info_ptr->lcd_density));
+
+    unsigned int tmp_lcd_density = device_info_ptr->lcd_density;
+#ifdef DIVIDE_LCD_DENSITY_BY_TWO
+    tmp_lcd_density /= 2;
+#endif
+    ret &= SetProperty(kPropPrefix + "lcd_density", std::to_string(tmp_lcd_density));
 
     return ret == true ? EXIT_SUCCESS : EXIT_FAILURE;
 }
