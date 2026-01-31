@@ -5,6 +5,7 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, packages/services/Car/car_product/build/car_generic_system.mk)
 $(call inherit-product, packages/services/Car/car_product/build/car_system_ext.mk)
 $(call inherit-product, packages/services/Car/car_product/build/car_product.mk)
@@ -17,6 +18,21 @@ $(call inherit-product, vendor/lineage/config/common_car.mk)
 # Inherit from device
 PRODUCT_IS_AUTOMOTIVE := true
 $(call inherit-product, device/xiaomi/mi89xx-mainline/mi8953_a/device.mk)
+
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += \
+    device/google_car/common/overlay
+
+PRODUCT_PACKAGES += \
+    CarServiceOverlayPhoneCar
+
+# Permissions
+ifneq ($(PORTRAIT_UI),true)
+# Enable landscape
+PRODUCT_COPY_FILES += \
+    device/google_car/common/unavailable_features_landscape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/unavailable_features_landscape.xml \
+    frameworks/native/data/etc/android.hardware.screen.landscape.xml:system/etc/permissions/android.hardware.screen.landscape.xml
+endif
 
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
 
