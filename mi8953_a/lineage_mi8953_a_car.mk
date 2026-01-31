@@ -18,6 +18,8 @@ $(call inherit-product, vendor/lineage/config/common_car.mk)
 PRODUCT_IS_AUTOMOTIVE := true
 $(call inherit-product, device/xiaomi/mi89xx-mainline/mi8953_a/device.mk)
 
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
+
 PRODUCT_NAME := lineage_mi8953_a_car
 PRODUCT_DEVICE := mi8953_a
 PRODUCT_BRAND := Xiaomi
