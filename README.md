@@ -4,9 +4,9 @@
 
 |         Target         |               Path               |                    URL                    |         Branch         |
 |------------------------|----------------------------------|-------------------------------------------|------------------------|
-| mi8916                 | kernel/mainline/msm8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/v6.18-rc6  |
-| mi8953_a               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | barni2000/6.18/develop |
-| mi89x7, tiare_mainline | kernel/mainline/msm89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.17.8         |
+| mi8916                 | kernel/mainline/msm8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/6.19       |
+| mi8953_a               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | barni2000/6.19/develop |
+| mi89x7, tiare_mainline | kernel/mainline/msm89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.19-develop   |
 
 ## Kernel patches
 
@@ -17,8 +17,8 @@
 | `ANDROID: mm: shmem: Use memfd-ashmem-shim ioctl handler"` | Fixes media codec | https://android.googlesource.com/kernel/common-patches/+/refs/heads/main-kernel/android-mainline/ANDROID-mm-shmem-Use-memfd-ashmem-shim-ioctl-handler.patch |
 | `Revert "dm: fix copying after src array boundaries"` | Fixes kernel crash during APEX mount on 6.15 | `git revert f1aff4bc199cb92c055668caed65505e3b4d2656` |
 | `Revert "dm: always update the array size in realloc_argv on success"` | Fixes kernel crash during APEX mount on 6.15 | `git revert 5a2a6c428190f945c5cbf5791f72dbea83e97f66` |
-| `Revert "remoteproc: qcom_wcnss: Fix on platforms without fallback regulators"` | Fixes qcom-wcnss-pil probe error on 6.15+ | `git revert 4ca45af0a56d00b86285d6fdd720dca3215059a7` |
-| `Revert "remoteproc: qcom_wcnss: Handle platforms with only single power domain"` | Fixes qcom-wcnss-pil probe error on 6.15+ | `git revert 65991ea8a6d1e68effdc01d95ebe39f1653f7b71` |
+| `Revert "remoteproc: qcom_wcnss: Fix on platforms without fallback regulators"` | Fixes qcom-wcnss-pil probe error on 6.15~6.18 | `git revert 4ca45af0a56d00b86285d6fdd720dca3215059a7` |
+| `Revert "remoteproc: qcom_wcnss: Handle platforms with only single power domain"` | Fixes qcom-wcnss-pil probe error on 6.15~6.18 | `git revert 65991ea8a6d1e68effdc01d95ebe39f1653f7b71` |
 | `Revert "usb: dwc3: remove unused sg struct member"` | Fixes USB Gadget data transfer on 6.13~6.16 on msm8953 | `git revert 686d4a2c26b49eaf6e817f16b7cb6c4b961aa7a7` |
 | `Revert "usb: dwc3: gadget: Remove dwc3_request->needs_extra_trb"` | Fixes USB Gadget data transfer on 6.13~6.16 on msm8953 | `git revert f5313c8b418c2efb9c0581d8066c5ae8c60c47de` |
 | `Revert "usb: dwc3: gadget: Cleanup SG handling"` | Fixes USB Gadget data transfer on 6.13~6.16 on msm8953 | `git revert 61440628a4ffe0639c4f69a6ffa46c3a0bead3d5` |
