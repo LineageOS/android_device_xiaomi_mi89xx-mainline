@@ -12,7 +12,7 @@ AB_OTA_UPDATER := false
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=mi439 \
-    lk2nd.pass-simplefb
+    lk2nd.pass-simplefb=xrgb8888,relocate
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/mainline/msm89x7-mainline
