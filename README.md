@@ -2,11 +2,11 @@
 
 ## Kernel repositories
 
-|         Target         |               Path               |                    URL                    |         Branch         |
-|------------------------|----------------------------------|-------------------------------------------|------------------------|
-| mi8916                 | kernel/mainline/msm8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/6.19       |
-| mi8953_a               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | barni2000/6.19/develop |
-| mi89x7, tiare_mainline | kernel/mainline/msm89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.19-develop   |
+|                 Target                 |               Path               |                    URL                    |         Branch         |
+|----------------------------------------|----------------------------------|-------------------------------------------|------------------------|
+| mi8916                                 | kernel/mainline/msm8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/6.19       |
+| mi8953_a                               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | barni2000/6.19/develop |
+| mi439_mainline, mi89x7, tiare_mainline | kernel/mainline/msm89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.19-develop   |
 
 ## Kernel patches
 
@@ -25,6 +25,10 @@
 | `Revert "drm/msm/dpu: move scaling limitations out of the hw_catalog"` | Fixes tearing display on 6.13~6.16 | [Patch](.kernel-patches/0001-Revert-drm-msm-dpu-move-scaling-limitations-out-of-t.patch) |
 | `drm/msm: Prevent early unmap of shared objects` | Fixes 3D graphics corruption on 6.17+ | https://github.com/msm8953-mainline/linux/commit/becee6461b98a0b78b302e4e5fd6ad40acba9295.patch |
 | `soc: qcom: ubwc: Add msm8940 entry` | Fixes display on msm8940 on 6.16+ | [Patch](.kernel-patches/0001-soc-qcom-ubwc-Add-msm8940-entry.patch) |
+
+## Notes for `mi439_mainline` target
+- If you're flashing the device starting from stock OS, please firstly flash vbmeta image from any working custom ROM (Example: [Official LineageOS builds](https://download.lineageos.org/devices/Mi439/builds)). We do not enable AVB support here for smaller image sizes, for now.
+- If you're flashing the device starting from non mainline linux OS, please flash the appropriate dtbo image from [dtbo-lk2nd](https://github.com/barni2000/dtbo-lk2nd/releases).
 
 ## Notes for `mi8916` target
 
