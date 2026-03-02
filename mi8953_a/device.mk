@@ -36,7 +36,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Firmware
 PRODUCT_PACKAGES += \
-    all_symlink_firmware_mi8953_a
+    symlink_firmware_mi8953_a
 
 _src := vendor/xiaomi/oxygen/proprietary/vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 _dst := $(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/oxygen/WCNSS_qcom_wlan_nv.bin
