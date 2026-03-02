@@ -4,3 +4,5 @@
 #
 
 import /vendor/etc/ueventd.mi89xx.rc
+
+modalias_handling enabled
