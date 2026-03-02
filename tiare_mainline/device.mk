@@ -32,10 +32,6 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Firmware
-PRODUCT_PACKAGES += \
-    all_symlink_firmware_tiare
-
 # Go
 PRODUCT_GO_DEFAULTS_SUFFIX := _512
 

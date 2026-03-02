@@ -5,3 +5,10 @@
 
 soong_namespace {
 }
+
+install_symlink {
+    name: "symlink_firmware_mi8953_a",
+    vendor: true,
+    installed_location: "firmware/qcom/msm8953/xiaomi",
+    symlink_target: "/odm/firmware/qcom/msm8953/xiaomi",
+}

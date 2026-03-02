@@ -32,10 +32,6 @@ TARGET_SCREEN_WIDTH := 720
 # Dalvik heap
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
-# Firmware
-PRODUCT_PACKAGES += \
-    all_symlink_firmware_mi89x7
-
 # Init
 PRODUCT_PACKAGES += \
     fstab.mi89x7 \
