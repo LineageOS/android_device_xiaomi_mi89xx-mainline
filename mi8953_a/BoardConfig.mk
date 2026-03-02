@@ -27,6 +27,7 @@ TARGET_DTB_LIST_WILDCARD := \
 ifneq ($(MI8953_USE_ANDROID_COMMON_KERNEL),true)
 TARGET_KERNEL_CONFIG_EXT := \
     $(TARGET_DEVICE_PATH)/kconfigs/config-postmarketos-qcom-msm8953.aarch64 \
+    $(TARGET_DEVICE_PATH)/kconfigs/basic.config \
     kernel/mainline/configs/fragments/android-base-pre/common.config \
     kernel/mainline/configs/fragments/android-base-pre/arm64.config \
     kernel/configs/b/android-6.12/android-base.config \
