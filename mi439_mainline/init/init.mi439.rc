@@ -11,7 +11,7 @@ on property:sys.bootstat.first_boot_completed=1
     write /sys/class/vtconsole/vtcon1/bind 0
 
 # Kernel module loading
-on early-boot
+on post-fs
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -s -d /vendor/lib/modules --all=/vendor/etc/modules.load.normal
 
 # Remoteproc
