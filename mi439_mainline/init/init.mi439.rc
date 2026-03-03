@@ -13,7 +13,4 @@ on property:sys.bootstat.first_boot_completed=1
 # Kernel module loading
 on post-fs
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -s -d /vendor/lib/modules --all=/vendor/etc/modules.load.normal
-
-# Remoteproc
-on early-boot
     trigger start_all_remoteproc
