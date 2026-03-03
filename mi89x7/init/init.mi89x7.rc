@@ -6,7 +6,7 @@
 import /vendor/etc/init/hw/init.mi89xx.rc
 
 # Kernel module loading
-on early-boot
+on post-fs
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -s -d /vendor/lib/modules --all=/vendor/etc/modules.load.normal
 
 # Power supply
