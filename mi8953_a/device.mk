@@ -35,18 +35,18 @@ TARGET_SCREEN_WIDTH := 1080
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Firmware
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/a506_zap.b00:$(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/a506_zap.b00 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/a506_zap.b01:$(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/a506_zap.b01 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/a506_zap.b02:$(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/a506_zap.b02 \
+    vendor/xiaomi/msm8953-common/proprietary/vendor/firmware/a506_zap.mdt:$(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/a506_zap.mdt
+
 PRODUCT_PACKAGES += \
     all_symlink_firmware_mi8953_a
 
 _src := vendor/xiaomi/oxygen/proprietary/vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 _dst := $(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/oxygen/WCNSS_qcom_wlan_nv.bin
 $(eval $(if $(wildcard $(_src)),PRODUCT_COPY_FILES += $(_src):$(_dst),$(warning $(_src) not found)))
-
-$(foreach device,daisy markw mido vince ysl rosy onclite oxygen,\
-    $(foreach file,a506_zap.b00 a506_zap.b01 a506_zap.b02 a506_zap.mdt,\
-        $(eval _src := vendor/xiaomi/$(device)/proprietary/vendor/firmware/$(file))\
-        $(eval _dst := $(TARGET_COPY_OUT_ODM)/firmware/qcom/msm8953/xiaomi/$(device)/$(file))\
-        $(eval $(if $(wildcard $(_src)),PRODUCT_COPY_FILES += $(_src):$(_dst),$(warning $(_src) not found)))))
 
 # Init
 PRODUCT_PACKAGES += \
