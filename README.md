@@ -8,6 +8,10 @@
 | mi8953_a                               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | barni2000/6.19/develop |
 | mi439_mainline, mi89x7, tiare_mainline | kernel/mainline/msm89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.19-develop   |
 
+## Kernel edits
+
+- After applying kernel patches specified below, on `mm/Kconfig`, on config option `MEMFD_ASHMEM_SHIM`, remove the dependency on `ASHMEM_C`.
+
 ## Kernel patches
 
 | Commit name | Purpose | Source |
