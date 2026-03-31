@@ -44,9 +44,9 @@ BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 RECOVERY_KERNEL_MODULES := \
-    $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.include_dep.basic)) \
-    $(strip $(shell cat $(DEVICE_PATH)/mi89x7/modprobe/modules.include_dep.drm)) \
     $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
+
+TARGET_AUTO_COLLECT_KERNEL_MODULE_DEPS := true
 
 # OTA
 TARGET_OTA_ASSERT_DEVICE := tiare,tiare_mainline
