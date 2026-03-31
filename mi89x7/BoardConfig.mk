@@ -33,16 +33,13 @@ TARGET_KERNEL_CONFIG_EXT := \
     kernel/mainline/configs/fragments/n/faster-build-time.config
 
 # Kernel modules
-BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := \
+BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.basic)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.drm)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.power_supply)) \
     $(strip $(shell cat $(TARGET_DEVICE_PATH)/modprobe/modules.load.touchscreen))
-BOARD_VENDOR_KERNEL_MODULES_LOAD := \
-    $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
-RECOVERY_KERNEL_MODULES := \
-    $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 
+RECOVERY_KERNEL_MODULES_FINDER := $(TARGET_DEVICE_PATH)/modprobe/test.sh
 TARGET_AUTO_COLLECT_KERNEL_MODULE_DEPS := true
 
 # OTA
