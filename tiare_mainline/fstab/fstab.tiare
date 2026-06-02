@@ -35,9 +35,5 @@ system /system erofs ro first_stage_mount,logical
 /dev/block/by-name/userdata /data ext4 nodev,noatime,nosuid,discard latemount,check,quota,formattable
 /dev/block/by-name/userdata /data f2fs nodev,noatime,nosuid,discard,reserve_root=32768 latemount,check,quota,formattable
 
-# Vendor
-vendor /vendor ext4 noatime,ro first_stage_mount,logical
-vendor /vendor erofs ro first_stage_mount,logical
-
 # ZRAM
 /dev/block/zram0 none swap defaults zramsize=50%
