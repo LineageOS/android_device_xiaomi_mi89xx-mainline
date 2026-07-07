@@ -53,6 +53,9 @@ const std::unordered_map<std::string, device_info_t> kDeviceInfoMap = {
     {"vince", {440}},
     {"ysl", {280}},
 
+    // Xiaomi MSM8998
+    {"sagit", {428}},
+
         // clang-format on
 };
 
