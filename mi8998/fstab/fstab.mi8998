@@ -29,6 +29,7 @@
 /devices/platform/soc/c0a4900.mmc/mmc_host/mmc* auto auto defaults voldmanaged=sdcard:auto,encryptable=userdata,noemulatedsd
 
 # System
+/dev/block/by-name/system /system erofs noatime,ro first_stage_mount
 /dev/block/by-name/system /system ext4 noatime,ro first_stage_mount
 
 # USB
