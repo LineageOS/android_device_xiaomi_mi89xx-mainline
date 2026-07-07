@@ -48,3 +48,7 @@ For Linux kernel v6.1:
 - The target is 32-bit, which requires the following changes to be made in AOSP tree in order to boot:
   1. On `packages/modules/Connectivity/bpf/loader/NetBpfLoad.cpp`, locate to the next line of the line containing `[Arm] 64-bit userspace required on 6.2+ kernels (%d).` (which should be `return 1;`), remove the line.
   2. On `system/netd/server/XfrmController.cpp`, in function `validateResponse`, replace the `return` statement containing `Error netlink message` with `return netdutils::status::ok;`.
+
+## Notes for `mi8998` target
+
+- Display and Graphics does not work properly for now. Use `scrcpy` tool to interact.

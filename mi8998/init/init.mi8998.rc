@@ -5,6 +5,11 @@
 
 import /vendor/etc/init/hw/init.mi89xx.rc
 
+# Display
+on property:sys.bootstat.first_boot_completed=1
+    write /sys/class/vtconsole/vtcon0/bind 0
+    write /sys/class/vtconsole/vtcon1/bind 0
+
 # Remoteproc
 on post-fs
     trigger start_all_remoteproc
