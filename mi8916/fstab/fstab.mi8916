@@ -26,6 +26,7 @@
 /dev/block/by-name/recovery /recovery emmc defaults defaults
 
 # System
+/dev/block/by-name/userdata /system erofs noatime,ro first_stage_mount
 /dev/block/by-name/userdata /system ext4 noatime,ro first_stage_mount
 
 # USB
