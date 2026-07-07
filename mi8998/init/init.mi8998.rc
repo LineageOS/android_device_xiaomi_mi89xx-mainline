@@ -1,0 +1,10 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+import /vendor/etc/init/hw/init.mi89xx.rc
+
+# Remoteproc
+on post-fs
+    trigger start_all_remoteproc
