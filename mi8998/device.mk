@@ -11,6 +11,7 @@ TARGET_QCOM_SOC := msm8998
 TARGET_AUDIO_HAL := default-aidl
 TARGET_HAS_BATTERY := false
 TARGET_SUPPORTS_SUSPEND := false
+TARGET_USES_FRAMEBUFFER_DISPLAY := true
 include device/mainline/qcom-common/optional/options.mk
 
 # Inherit from parent
