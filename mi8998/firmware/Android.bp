@@ -1,0 +1,550 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "symlink_firmware_mi8998",
+    vendor: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi",
+    symlink_target: "/odm/firmware/qcom/msm8998/xiaomi",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_a540_gpmu.fw2",
+    vendor: true,
+    installed_location: "firmware/qcom/a540_gpmu.fw2",
+    symlink_target: "/odm/firmware/qcom/a540_gpmu.fw2",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.mbn",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.mdt",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.mbn",
+    symlink_target: "/vendor/firmware_mnt/image/modem.mdt",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.mbn",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.mdt",
+}
+
+/*
+```bash
+for f in adsp.b{00..11} mba.mbn modem.b{00..28} slpi.b{00..13} wlanmdsp.mbn; do
+echo "install_symlink {
+    name: \"symlink_firmware_mi8998_${f}\",
+    device_specific: true,
+    installed_location: \"firmware/qcom/msm8998/xiaomi/${f}\",
+    symlink_target: \"/vendor/firmware_mnt/image/${f}\",
+}
+"
+done
+```
+
+```bash
+for f in adsp.b{00..11} mba.mbn modem.b{00..28} slpi.b{00..13} wlanmdsp.mbn; do
+echo "        \"symlink_firmware_mi8998_${f}\","
+done
+```
+*/
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b00",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b00",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b00",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b01",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b01",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b01",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b02",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b02",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b02",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b03",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b03",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b03",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b04",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b04",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b04",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b05",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b05",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b05",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b06",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b06",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b06",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b07",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b07",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b07",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b08",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b08",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b08",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b09",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b09",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b09",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b10",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b10",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b10",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_adsp.b11",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/adsp.b11",
+    symlink_target: "/vendor/firmware_mnt/image/adsp.b11",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_mba.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/mba.mbn",
+    symlink_target: "/vendor/firmware_mnt/image/mba.mbn",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b00",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b00",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b00",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b01",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b01",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b01",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b02",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b02",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b02",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b03",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b03",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b03",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b04",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b04",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b04",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b05",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b05",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b05",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b06",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b06",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b06",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b07",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b07",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b07",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b08",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b08",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b08",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b09",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b09",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b09",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b10",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b10",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b10",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b11",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b11",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b11",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b12",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b12",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b12",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b13",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b13",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b13",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b14",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b14",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b14",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b15",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b15",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b15",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b16",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b16",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b16",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b17",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b17",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b17",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b18",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b18",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b18",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b19",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b19",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b19",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b20",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b20",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b20",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b21",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b21",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b21",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b22",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b22",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b22",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b23",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b23",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b23",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b24",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b24",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b24",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b25",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b25",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b25",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b26",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b26",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b26",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b27",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b27",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b27",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_modem.b28",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/modem.b28",
+    symlink_target: "/vendor/firmware_mnt/image/modem.b28",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b00",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b00",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b00",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b01",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b01",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b01",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b02",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b02",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b02",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b03",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b03",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b03",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b04",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b04",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b04",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b05",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b05",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b05",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b06",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b06",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b06",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b07",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b07",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b07",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b08",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b08",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b08",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b09",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b09",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b09",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b10",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b10",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b10",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b11",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b11",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b11",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b12",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b12",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b12",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_slpi.b13",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/slpi.b13",
+    symlink_target: "/vendor/firmware_mnt/image/slpi.b13",
+}
+
+install_symlink {
+    name: "symlink_firmware_mi8998_wlanmdsp.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/wlanmdsp.mbn",
+    symlink_target: "/vendor/firmware_mnt/image/wlanmdsp.mbn",
+}
+
+genrule {
+    name: "gen_firmware_mi8998_ipa_fws.mbn",
+    tools: ["pil-squasher"],
+    out: ["ipa_fws.mbn"],
+    cmd: "$(location pil-squasher) $(out) ../../../../../vendor/xiaomi/msm8998-common/proprietary/vendor/firmware/ipa_fws.mdt",
+}
+
+prebuilt_firmware {
+    name: "firmware_mi8998_ipa_fws.mbn",
+    src: ":gen_firmware_mi8998_ipa_fws.mbn",
+    filename_from_src: true,
+    device_specific: true,
+    sub_dir: "qcom/msm8998/xiaomi",
+}
+
+// Workaround soong installing device_specific prebuilt_firmware module to /odm/etc/firmware
+install_symlink {
+    name: "symlink_firmware_mi8998_ipa_fws.mbn",
+    device_specific: true,
+    installed_location: "firmware/qcom/msm8998/xiaomi/ipa_fws.mbn",
+    symlink_target: "/odm/etc/firmware/qcom/msm8998/xiaomi/ipa_fws.mbn",
+}
+
+phony {
+    name: "all_symlink_firmware_mi8998",
+    required: [
+        "symlink_firmware_mi8998",
+        "symlink_firmware_mi8998_a540_gpmu.fw2",
+        "symlink_firmware_mi8998_adsp.b00",
+        "symlink_firmware_mi8998_adsp.b01",
+        "symlink_firmware_mi8998_adsp.b02",
+        "symlink_firmware_mi8998_adsp.b03",
+        "symlink_firmware_mi8998_adsp.b04",
+        "symlink_firmware_mi8998_adsp.b05",
+        "symlink_firmware_mi8998_adsp.b06",
+        "symlink_firmware_mi8998_adsp.b07",
+        "symlink_firmware_mi8998_adsp.b08",
+        "symlink_firmware_mi8998_adsp.b09",
+        "symlink_firmware_mi8998_adsp.b10",
+        "symlink_firmware_mi8998_adsp.b11",
+        "symlink_firmware_mi8998_adsp.mbn",
+        "symlink_firmware_mi8998_ipa_fws.mbn",
+        "symlink_firmware_mi8998_mba.mbn",
+        "symlink_firmware_mi8998_modem.b00",
+        "symlink_firmware_mi8998_modem.b01",
+        "symlink_firmware_mi8998_modem.b02",
+        "symlink_firmware_mi8998_modem.b03",
+        "symlink_firmware_mi8998_modem.b04",
+        "symlink_firmware_mi8998_modem.b05",
+        "symlink_firmware_mi8998_modem.b06",
+        "symlink_firmware_mi8998_modem.b07",
+        "symlink_firmware_mi8998_modem.b08",
+        "symlink_firmware_mi8998_modem.b09",
+        "symlink_firmware_mi8998_modem.b10",
+        "symlink_firmware_mi8998_modem.b11",
+        "symlink_firmware_mi8998_modem.b12",
+        "symlink_firmware_mi8998_modem.b13",
+        "symlink_firmware_mi8998_modem.b14",
+        "symlink_firmware_mi8998_modem.b15",
+        "symlink_firmware_mi8998_modem.b16",
+        "symlink_firmware_mi8998_modem.b17",
+        "symlink_firmware_mi8998_modem.b18",
+        "symlink_firmware_mi8998_modem.b19",
+        "symlink_firmware_mi8998_modem.b20",
+        "symlink_firmware_mi8998_modem.b21",
+        "symlink_firmware_mi8998_modem.b22",
+        "symlink_firmware_mi8998_modem.b23",
+        "symlink_firmware_mi8998_modem.b24",
+        "symlink_firmware_mi8998_modem.b25",
+        "symlink_firmware_mi8998_modem.b26",
+        "symlink_firmware_mi8998_modem.b27",
+        "symlink_firmware_mi8998_modem.b28",
+        "symlink_firmware_mi8998_modem.mbn",
+        "symlink_firmware_mi8998_slpi.b00",
+        "symlink_firmware_mi8998_slpi.b01",
+        "symlink_firmware_mi8998_slpi.b02",
+        "symlink_firmware_mi8998_slpi.b03",
+        "symlink_firmware_mi8998_slpi.b04",
+        "symlink_firmware_mi8998_slpi.b05",
+        "symlink_firmware_mi8998_slpi.b06",
+        "symlink_firmware_mi8998_slpi.b07",
+        "symlink_firmware_mi8998_slpi.b08",
+        "symlink_firmware_mi8998_slpi.b09",
+        "symlink_firmware_mi8998_slpi.b10",
+        "symlink_firmware_mi8998_slpi.b11",
+        "symlink_firmware_mi8998_slpi.b12",
+        "symlink_firmware_mi8998_slpi.b13",
+        "symlink_firmware_mi8998_slpi.mbn",
+        "symlink_firmware_mi8998_wlanmdsp.mbn",
+    ],
+}
