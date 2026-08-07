@@ -16,6 +16,24 @@
       "message": "Maybe add an appropriate description with device name/model as well?",
       "revId": "c2d96cb9680eaf8403da72afc449ddc0ed3e87d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ccb26f29_fe92818a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2026-08-07T06:11:54Z",
+      "side": 1,
+      "message": "a prototype device, there\u0027s no model name in its stock rom as well, this chain is DNM whatsoever",
+      "parentUuid": "c10c4bae_84d0dfd2",
+      "revId": "c2d96cb9680eaf8403da72afc449ddc0ed3e87d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
