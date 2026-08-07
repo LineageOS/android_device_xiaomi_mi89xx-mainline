@@ -5,7 +5,7 @@
 |                 Target                 |               Path               |                    URL                    |         Branch         |
 |----------------------------------------|----------------------------------|-------------------------------------------|------------------------|
 | mi8916                                 | kernel/mainline/msm8916-mainline | https://github.com/msm8916-mainline/linux | wip/msm8916/6.19       |
-| mi8953_a                               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | barni2000/6.19/develop |
+| mi8953_a, daisy_mainline               | kernel/mainline/msm8953-mainline | https://github.com/msm8953-mainline/linux | barni2000/6.19/develop |
 | mi8998                                 | kernel/mainline/msm8998-mainline | https://github.com/msm8998-mainline/linux | qcom-msm8998-6.1.y     |
 | mi439_mainline, mi89x7, tiare_mainline | kernel/mainline/msm89x7-mainline | https://github.com/msm89x7-mainline/linux | msm89x7/6.19-develop   |
 
