@@ -1,0 +1,20 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+
+import /vendor/etc/init/hw/init.mi89xx.rc
+
+# Kernel module loading
+on post-fs
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -s -d /vendor/lib/modules --all=/vendor/etc/modules.load.normal
+    trigger start_all_remoteproc
+
+# Power supply
+# TODO: Verify and enable this
+#on property:ro.vendor.device.codename=hydrogen
+#    write /sys/class/power_supply/qcom-smbchg-usb/constant_charge_current 2000000
+#    write /sys/class/power_supply/qcom-smbchg-usb/input_current_limit 2000000
+#on property:ro.vendor.device.codename=kenzo
+#    write /sys/class/power_supply/qcom-smbchg-usb/constant_charge_current 2000000
+#    write /sys/class/power_supply/qcom-smbchg-usb/input_current_limit 2000000
