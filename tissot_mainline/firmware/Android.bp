@@ -1,0 +1,18 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "symlink_firmware_tissot",
+    vendor: true,
+    installed_location: "firmware/qcom/msm8953/xiaomi/tissot",
+    symlink_target: "/odm/firmware/qcom/msm8953/xiaomi/tissot",
+}
+
+phony {
+    name: "all_symlink_firmware_tissot",
+    required: [
+        "symlink_firmware_tissot",
+    ],
+}

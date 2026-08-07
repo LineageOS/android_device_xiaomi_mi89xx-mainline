@@ -1,0 +1,9 @@
+<audiohal>
+    <codec_probe file="/proc/asound/card0/id">
+        <case name="xiaomitissot" file="audio.xiaomi-daisy.xml" />
+    </codec_probe>
+    <mixer card="0">
+    </mixer>
+    <stream type="pcm" dir="out" card="0" device="0">
+    </stream>
+</audiohal>

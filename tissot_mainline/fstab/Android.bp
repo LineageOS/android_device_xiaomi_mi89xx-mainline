@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "fstab.tissot",
+    src: "fstab.tissot",
+    vendor: true,
+    ramdisk_available: true,
+}
