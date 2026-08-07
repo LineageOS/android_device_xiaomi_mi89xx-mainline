@@ -1,0 +1,1 @@
+require board=tissot_mainline|tissot
