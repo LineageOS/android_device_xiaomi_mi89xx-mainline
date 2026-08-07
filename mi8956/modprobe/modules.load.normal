@@ -1,0 +1,20 @@
+# automatically loaded by ueventd
+bluetooth
+btqca
+cec
+cfg80211
+drm_display_helper
+drm_exec
+drm_gpuvm
+gpu_sched
+libarc4
+mac80211
+mdt_loader
+pmic_sec_write
+qcom_common
+qcom_pil_info
+qcom_wcnss_pil
+rfkill
+ubwc_config
+wcn36xx
+wcnss_ctrl
