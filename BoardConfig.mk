@@ -28,7 +28,7 @@ BOARD_KERNEL_CMDLINE := \
     console=tty0
 
 ifneq ($(TARGET_LK2ND_PLATFORM),)
-BOARD_KERNEL_CMDLINE := \
+BOARD_KERNEL_CMDLINE += \
     lk2nd.pass-ramoops=zap
 endif
 
