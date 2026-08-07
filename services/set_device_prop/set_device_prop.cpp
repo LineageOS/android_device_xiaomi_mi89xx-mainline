@@ -127,7 +127,7 @@ int main() {
 #ifdef DIVIDE_LCD_DENSITY_BY_TWO
     tmp_lcd_density /= 2;
 #endif
-    ret &= SetProperty(kPropPrefix + "lcd_density", std::to_string(tmp_lcd_density));
+    SetProperty(kPropPrefix + "lcd_density", std::to_string(tmp_lcd_density));
 
     return ret == true ? EXIT_SUCCESS : EXIT_FAILURE;
 }
