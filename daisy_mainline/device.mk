@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
     audio.daisy_mainline.xml \
     audio.xiaomi-daisy.xml
 
+# Bluetooth
+PRODUCT_VENDOR_PROPERTIES += bluetooth.le.disable_apcf_extended_features=0
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
