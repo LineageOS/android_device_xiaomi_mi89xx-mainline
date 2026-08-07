@@ -34,6 +34,24 @@
       "parentUuid": "c10c4bae_84d0dfd2",
       "revId": "c2d96cb9680eaf8403da72afc449ddc0ed3e87d3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07efd3b8_93b99192",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 28798
+      },
+      "writtenOn": "2026-08-07T06:13:51Z",
+      "side": 1,
+      "message": "generically majorly, like for https://review.lineageos.org/c/LineageOS/android_device_xiaomi_mi89xx-mainline/+/495908/8 as well",
+      "parentUuid": "ccb26f29_fe92818a",
+      "revId": "c2d96cb9680eaf8403da72afc449ddc0ed3e87d3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
