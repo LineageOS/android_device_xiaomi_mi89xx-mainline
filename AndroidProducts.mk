@@ -4,12 +4,14 @@
 #
 
 PRODUCT_MAKEFILES := \
+    aosp_daisy_mainline:$(LOCAL_DIR)/daisy_mainline/aosp_daisy_mainline.mk \
     aosp_mi439_mainline:$(LOCAL_DIR)/mi439_mainline/aosp_mi439_mainline.mk \
     aosp_mi8916:$(LOCAL_DIR)/mi8916/aosp_mi8916.mk \
     aosp_mi8953_a:$(LOCAL_DIR)/mi8953_a/aosp_mi8953_a.mk \
     aosp_mi8998:$(LOCAL_DIR)/mi8998/aosp_mi8998.mk \
     aosp_mi89x7:$(LOCAL_DIR)/mi89x7/aosp_mi89x7.mk \
     aosp_tiare_mainline:$(LOCAL_DIR)/tiare_mainline/aosp_tiare_mainline.mk \
+    lineage_daisy_mainline:$(LOCAL_DIR)/daisy_mainline/lineage_daisy_mainline.mk \
     lineage_mi439_mainline:$(LOCAL_DIR)/mi439_mainline/lineage_mi439_mainline.mk \
     lineage_mi8916:$(LOCAL_DIR)/mi8916/lineage_mi8916.mk \
     lineage_mi8953_a:$(LOCAL_DIR)/mi8953_a/lineage_mi8953_a.mk \
@@ -22,12 +24,14 @@ PRODUCT_MAKEFILES := \
     lineage_tiare_mainline:$(LOCAL_DIR)/tiare_mainline/lineage_tiare_mainline.mk
 
 $(foreach build_type, user userdebug eng, \
+    $(eval COMMON_LUNCH_CHOICES += aosp_daisy_mainline-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += aosp_mi439_mainline-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += aosp_mi8916-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += aosp_mi8953_a-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += aosp_mi8998-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += aosp_mi89x7-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += aosp_tiare_mainline-$(build_type)) \
+    $(eval COMMON_LUNCH_CHOICES += lineage_daisy_mainline-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += lineage_mi439_mainline-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += lineage_mi8916-$(build_type)) \
     $(eval COMMON_LUNCH_CHOICES += lineage_mi8953_a-$(build_type)) \
