@@ -23,6 +23,17 @@ define build-lk2nd-boot-image
 	cat $(2) >> $(1)
 endef
 
+ifeq ($(BOARD_USES_RECOVERY_AS_BOOT),true)
+
+$(foreach b,$(INSTALLED_BOOTIMAGE_TARGET), $(eval $(call add-dependency,$(b),$(call bootimage-to-kernel,$(b)))))
+$(INSTALLED_BOOTIMAGE_TARGET): $(recoveryimage-deps) $(RECOVERYIMAGE_EXTRA_DEPS) $(MKBOOTIMG_LK2ND_IMAGE_PATH)
+	$(call pretty,"Target boot image from recovery with lk2nd: $@")
+	$(call build-recoveryimage-target,$@.mkbootimg, $(PRODUCT_OUT)/$(subst .img,,$(subst boot,kernel,$(notdir $@))))
+	$(call build-lk2nd-boot-image,$@,$@.mkbootimg,$(MKBOOTIMG_LK2ND_IMAGE_PATH))
+	$(call assert-max-image-size,$@,$(call get-bootimage-partition-size,$@,boot))
+
+else # !BOARD_USES_RECOVERY_AS_BOOT
+
 $(foreach b,$(INSTALLED_BOOTIMAGE_TARGET), $(eval $(call add-dependency,$(b),$(call bootimage-to-kernel,$(b)))))
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(BOOTIMAGE_EXTRA_DEPS) $(MKBOOTIMG_LK2ND_IMAGE_PATH)
@@ -36,3 +47,5 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(recoveryimage-deps) $(RECOVERYIMAGE_EXTRA_D
 	$(call build-recoveryimage-target,$@.mkbootimg,$(recovery_kernel))
 	$(call build-lk2nd-boot-image,$@,$@.mkbootimg,$(MKBOOTIMG_LK2ND_IMAGE_PATH))
 	$(call assert-max-image-size,$@,$(call get-hash-image-max-size,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE)))
+
+endif
