@@ -60,6 +60,12 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,mainline_common_libinit,set_properties_from,devicetree)
 
+# Input
+PRODUCT_PACKAGES += \
+    ts_vkeys.kl
+
+TARGET_TOUCHSCREEN_HAS_VIRTUAL_KEYS := true
+
 # Kernel
 PRODUCT_PACKAGES += \
     modules.load.normal

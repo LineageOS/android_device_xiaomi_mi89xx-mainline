@@ -1,0 +1,11 @@
+# Input (ts_vkeys)
+vendor.ts_vkeys.menu.x=200
+vendor.ts_vkeys.menu.y=2040
+vendor.ts_vkeys.menu.key_code=139
+vendor.ts_vkeys.home.x=500
+vendor.ts_vkeys.home.y=2040
+vendor.ts_vkeys.home.key_code=172
+vendor.ts_vkeys.back.x=800
+vendor.ts_vkeys.back.y=2040
+vendor.ts_vkeys.back.key_code=158
+vendor.ts_vkeys.names=menu,home,back
