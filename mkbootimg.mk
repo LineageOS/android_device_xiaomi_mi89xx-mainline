@@ -17,8 +17,8 @@ define build-lk2nd-boot-image
 	$(call assert-max-image-size,$(1),$(TARGET_LK2ND_ACTUAL_BOOTIMG_OFFSET))
 
 	lk2nd_size=$$(stat -c%s $(1)); \
-	lk2nd_gap=$$(expr $(TARGET_LK2ND_ACTUAL_BOOTIMG_OFFSET) - $$lk2nd_size); \
-	dd if=/dev/zero bs=$$lk2nd_gap count=1 >> $(1)
+	lk2nd_padding=$$(expr $(TARGET_LK2ND_ACTUAL_BOOTIMG_OFFSET) - $$lk2nd_size); \
+	dd if=/dev/zero bs=$$lk2nd_padding count=1 >> $(1)
 
 	cat $(2) >> $(1)
 endef
