@@ -13,6 +13,9 @@ AB_OTA_UPDATER := false
 BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=tiare
 
+# Display
+TARGET_SCREEN_DENSITY := 320
+
 # Filesystem
 BOARD_EROFS_PCLUSTER_SIZE := 262144
 
@@ -78,5 +81,4 @@ BOARD_TIARE_DYNPART_PARTITION_LIST := system vendor
 TARGET_ODM_PROP += $(TARGET_DEVICE_PATH)/properties/odm.prop
 
 # Recovery
-TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_FSTAB := $(TARGET_DEVICE_PATH)/fstab/fstab.tiare
