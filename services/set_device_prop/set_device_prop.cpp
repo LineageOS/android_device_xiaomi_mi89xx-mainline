@@ -50,6 +50,7 @@ const std::unordered_map<std::string, device_info_t> kDeviceInfoMap = {
     {"oxygen", {342}},
     {"uter", {400}},
     {"sakura", {420}},
+    {"tissot", {400}},
     {"vince", {440}},
     {"ysl", {280}},
 
