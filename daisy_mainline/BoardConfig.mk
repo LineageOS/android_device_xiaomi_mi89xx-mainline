@@ -16,6 +16,9 @@ AB_OTA_PARTITIONS := \
 BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=daisy
 
+# Bootloader
+TARGET_LK2ND_MAKE_FLAGS += ANDROID_USES_RECOVERY_AS_BOOT=1
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
