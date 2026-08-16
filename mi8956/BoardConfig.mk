@@ -11,8 +11,7 @@ AB_OTA_UPDATER := false
 
 # Boot parameters
 BOARD_KERNEL_CMDLINE += \
-    androidboot.hardware=mi8956 \
-    maxcpus=4
+    androidboot.hardware=mi8956
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/mainline/msm8956-mainline
