@@ -83,6 +83,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.remoteproc.4080000_remoteproc.ignore=1
 
+# Sensors
+$(call soong_config_set_bool,sensors_hal_mainline,run_as_root,true)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(TARGET_DEVICE_PATH) \
