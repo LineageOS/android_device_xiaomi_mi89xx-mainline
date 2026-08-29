@@ -61,13 +61,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.screen.landscape.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.screen.landscape.xml
 endif
 
+# Scoped Storage
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Set device properties
 PRODUCT_PACKAGES += \
     set_device_prop \
     set_device_prop.recovery
-
-# Scoped Storage
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
