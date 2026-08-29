@@ -69,14 +69,6 @@ PRODUCT_PACKAGES += \
 # Scoped Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensor.accelerometer.prebuilt.xml \
-    android.hardware.sensor.compass.prebuilt.xml \
-    android.hardware.sensor.gyroscope.prebuilt.xml \
-    android.hardware.sensor.light.prebuilt.xml \
-    android.hardware.sensor.proximity.prebuilt.xml
-
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
 
