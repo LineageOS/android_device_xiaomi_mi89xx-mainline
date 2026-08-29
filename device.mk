@@ -64,6 +64,14 @@ endif
 # Scoped Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensor.accelerometer.prebuilt.xml \
+    android.hardware.sensor.compass.prebuilt.xml \
+    android.hardware.sensor.gyroscope.prebuilt.xml \
+    android.hardware.sensor.light.prebuilt.xml \
+    android.hardware.sensor.proximity.prebuilt.xml
+
 # Set device properties
 PRODUCT_PACKAGES += \
     set_device_prop \
