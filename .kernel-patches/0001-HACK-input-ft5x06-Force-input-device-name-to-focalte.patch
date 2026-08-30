@@ -1,0 +1,25 @@
+From 6be838f46bd6c830b506a76bdfced627bc8b2033 Mon Sep 17 00:00:00 2001
+From: Yumi Yukimura <me.cafebabe@gmail.com>
+Date: Sun, 30 Aug 2026 22:00:36 +0800
+Subject: [PATCH] [HACK] input: ft5x06: Force input device name to "focaltech"
+
+---
+ drivers/input/touchscreen/edt-ft5x06.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/input/touchscreen/edt-ft5x06.c b/drivers/input/touchscreen/edt-ft5x06.c
+index bf498bd4dea96..a7938dc5e85f7 100644
+--- a/drivers/input/touchscreen/edt-ft5x06.c
++++ b/drivers/input/touchscreen/edt-ft5x06.c
+@@ -1310,7 +1310,7 @@ static int edt_ft5x06_ts_probe(struct i2c_client *client)
+ 		"Model \"%s\", Rev. \"%s\", %dx%d sensors\n",
+ 		tsdata->name, tsdata->fw_version, tsdata->num_x, tsdata->num_y);
+ 
+-	input->name = tsdata->name;
++	input->name = "focaltech";
+ 	input->id.bustype = BUS_I2C;
+ 	input->dev.parent = &client->dev;
+ 
+-- 
+2.47.3
+
