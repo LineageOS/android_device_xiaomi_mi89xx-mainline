@@ -37,8 +37,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     fstab.mi89x7 \
     fstab.mi89x7.ramdisk \
+    init.common.mi89x7.rc \
+    init.common.mi89x7.rc.recovery \
     init.mi89x7.rc \
-    init.recovery.mi89x7.rc \
     ueventd.mi89x7.rc
 
 PRODUCT_PACKAGES += \
