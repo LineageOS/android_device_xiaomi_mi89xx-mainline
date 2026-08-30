@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     fstab.tiare \
     fstab.tiare.ramdisk \
     init.tiare.rc \
+    init.recovery.tiare.rc \
     ueventd.tiare.rc
 
 PRODUCT_PACKAGES += \
